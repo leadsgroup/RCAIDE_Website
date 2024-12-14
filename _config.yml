@@ -8,10 +8,6 @@ lang: en-US
 baseurl: "" # Leave empty unless your site is in a subdirectory
 url: "" # Base URL, e.g., https://your-site.com
 
-# Minimal Mistakes-specific settings
-theme: minimal-mistakes-jekyll
-remote_theme: mmistakes/minimal-mistakes
-
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -46,3 +42,6 @@ exclude:
   - .gitignore
   - README.md
   - vendor
+gem "jekyll-remote-theme"
+
+bootwatch: darkly
