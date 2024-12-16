@@ -1,0 +1,66 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="{{ site.baseurl }}/">
+                <span><img src="{{ "/assets/img/leads_logo.png" | relative_url }}" alt="Logo"></span> {{ site.title }}
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li {% if page.sectionid=='Install' %} class="active" {% endif %}><a href="{{ "/Install/" | relative_url }}">Install</a></li>
+                <li {% if page.sectionid=='Documentation' %} class="active" {% endif %}><a href="{{ "/docs/home/" | relative_url }}">Documentation</a></li>
+                <li {% if page.sectionid=='GUI' %} class="active" {% endif %}><a href="{{ "/docs/home" | relative_url }}">GUI</a></li>
+                <li {% if page.sectionid=='Learn' %} class="active" {% endif %}><a href="{{ "/Tutorials/" | relative_url }}">Learn</a></li>
+                <li {% if page.sectionid=='Community' %} class="active" {% endif %}><a href="{{ "/Community/" | relative_url }}">Community</a></li>
+                <li {% if page.sectionid=='Contribute' %} class="active" {% endif %}><a href="{{ "/Contact/" | relative_url }}">Contribute</a></li>
+                <li {% if page.sectionid=='About' %} class="active" {% endif %}><a href="{{ "/About/" | relative_url }}">About</a></li>
+            </ul>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://x.com/leadsresearch"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.youtube.com/@LEADSresearch"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/leadsgroup"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+.navbar-default {
+    min-height: 55px;
+}
+
+.navbar-brand {
+    height: 15px;
+    padding: 15px;
+    margin-top: 5.5px;
+}
+
+.navbar-brand img {
+    height: 45px;
+    width: auto;
+    margin-bottom: 40px;
+}
+
+.navbar-brand span {
+    vertical-align: top;
+    line-height: 50px;
+    display: inline-block;
+}
+
+.navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar-toggle {
+    margin-top: 10px;
+}
+</style>
