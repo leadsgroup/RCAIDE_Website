@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/RCAIDE/sitemap.xml
+Sitemap: http://localhost:4000/RCAIDE_Website/sitemap.xml

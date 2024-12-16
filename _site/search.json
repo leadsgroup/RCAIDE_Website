@@ -5,14 +5,14 @@
     
     {
       "title": "Welcome",
-      "url": "/RCAIDE/docs/home/"
+      "url": "/RCAIDE_Website/docs/home/"
     },
   
     
     
     {
       "title": "Themes",
-      "url": "/RCAIDE/docs/themes/"
+      "url": "/RCAIDE_Website/docs/themes/"
     },
   
     
@@ -28,21 +28,21 @@
     
     {
       "title": "Markdown Cheatsheet",
-      "url": "/RCAIDE/docs/cheatsheet/"
+      "url": "/RCAIDE_Website/docs/cheatsheet/"
     },
   
     
     
     {
       "title": "Font Awesome Icon List",
-      "url": "/RCAIDE/docs/font-awesome/"
+      "url": "/RCAIDE_Website/docs/font-awesome/"
     },
   
     
     
     {
       "title": "Bootstrap Features",
-      "url": "/RCAIDE/docs/bootstrap/"
+      "url": "/RCAIDE_Website/docs/bootstrap/"
     },
   
 
@@ -59,12 +59,12 @@
   
   {
   "title": "Jekyll Doc Theme is published!",
-  "url": "/RCAIDE/blog/2017/05/03/jekyll-doc-theme/"
+  "url": "/RCAIDE_Website/blog/2017/05/03/jekyll-doc-theme/"
   },
   
   {
   "title": "Welcome to Jekyll!",
-  "url": "/RCAIDE/blog/2017/02/01/welcome-to-jekyll/"
+  "url": "/RCAIDE_Website/blog/2017/02/01/welcome-to-jekyll/"
   }
   
 ]
