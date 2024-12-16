@@ -5,7 +5,7 @@ description: >
  RCAIDE
 lang: en-US
 
-baseurl: "/RCAIDE" # the subpath of your site, e.g. /blog/
+baseurl: "https://leadsgroup.github.io/RCAIDE_Website/" # the subpath of your site, e.g. /blog/
 url: https://www.leadsresearchgroup.com/RCAIDE # the base hostname & protocol for your site
 git_address: https://github.com/leadsresearchgroup/RCAIDE
 git_edit_address: https://github.com/leadsresearchgroup/RCAIDE/blob/gh-pages
