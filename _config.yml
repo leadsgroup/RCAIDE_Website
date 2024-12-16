@@ -7,8 +7,8 @@ lang: en-US
 
 baseurl: ""
 url: "https://www.rcaide.leadsresearchgroup.com"
-git_address: https://github.com/leadsresearchgroup/RCAIDE
-git_edit_address: https://github.com/leadsresearchgroup/RCAIDE/blob/gh-pages
+git_address: https://github.com/leadsgroup/RCAIDE_Website
+git_edit_address: https://github.com/leadsgroup/RCAIDE_Website/blob/gh-pages
 
 # theme options from https://bootswatch.com/3/
 # comment out this to use default Bootstrap
