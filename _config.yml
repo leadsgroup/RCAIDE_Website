@@ -5,8 +5,8 @@ description: >
  RCAIDE
 lang: en-US
 
-baseurl: "/RCAIDE_Website"
-url: "https://leadsgroup.github.io"
+baseurl: ""
+url: "https://www.rcaide.leadsresearchgroup.com"
 git_address: https://github.com/leadsresearchgroup/RCAIDE
 git_edit_address: https://github.com/leadsresearchgroup/RCAIDE/blob/gh-pages
 
@@ -56,3 +56,6 @@ collections:
   posts:
     permalink: /blog/:year/:month/:day/:title/
     output: true
+
+include:
+  - CNAME
