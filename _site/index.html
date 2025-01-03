@@ -99,6 +99,16 @@
 .navbar-toggle {
     margin-top: 10px;
 }
+
+.img-fluid {
+    margin: 20px auto;
+}
+.section-divider {
+    height: 3px;
+    background: linear-gradient(to right, transparent, #007bff, transparent);
+    margin: 2rem 0;
+    width: 100%;
+}
 </style>
 
 
@@ -112,79 +122,134 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="row align-items-center mb-5">
-        <div class="col-md-6">
-            <h2 class="header-light regular-pad">What is RCAIDE?</h2>
-            <p class="lead">
-                RCAIDE is a powerful open-source Python platform that revolutionizes aircraft design and analysis. 
-                From commercial airliners to UAVs and next-generation hybrid-electric aircraft, RCAIDE provides 
-                comprehensive multi-disciplinary analysis tools backed by validated engineering methods. RCAIDE's 
-                streamlined workflow and modular architecture help aerospace engineers and researchers accelerate 
-                development cycles and explore innovative designs with confidence.
-              </p>                    
-        </div>
-        <div class="col-md-6 text-center">
-            <img src="/assets/img/RCAIDE_Logo_No_Background.png" alt="RCAIDE logo" class="img-responsive logo-scaled">
-        </div>
-    </div>
-    
-    <hr class="my-5">
-
-        <div class="col-sm-6 feature-box">
-            <h1><i class="fa fa-cogs" aria-hidden="true"></i></h1>
-            <h3>Verification & Validation</h3>
-            <div class="mt-4">
-                <p>Coming Soon</p>
+<div class="row">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <h2 class="header-light regular-pad">What is RCAIDE?</h2>
+                <p class="lead" style="font-size: 19px;">
+                    RCAIDE is a powerful open-source Python platform that revolutionizes aircraft design and analysis. 
+                    From commercial airliners to UAVs and next-generation hybrid-electric aircraft, RCAIDE provides 
+                    comprehensive multi-disciplinary analysis tools backed by validated engineering methods. RCAIDE's 
+                    streamlined workflow and modular architecture help aerospace engineers and researchers accelerate 
+                    development cycles and explore innovative designs with confidence.
+                </p>                    
             </div>
-        </div>
-        <div class="col-sm-6 feature-box">
-            <h1><i class="fa fa-code-fork" aria-hidden="true"></i></h1>
-            <h3>Release Notes</h3>
-            <div class="mt-4">
-                <p>Coming Soon</p>
+            <div class="col-md-6">
+                <img src="/assets/img/RCAIDE_Logo_No_Background.png" 
+                     alt="RCAIDE logo" 
+                     class="img-responsive logo-scaled"
+                     style="max-width: 300px; width: 90%; height: auto; margin-left: auto; margin-right: auto; display: block;">
             </div>
         </div>
     </div>
 </div>
 
-<style>
-    .lead {
-        font-size: 1.6rem;
-        line-height: 1.8;
-        margin-bottom: 2rem;
-    }
-    
-    .logo-scaled {
-        width: 45%;
-        margin: 2rem auto;
-    }
-    
-    .feature-box {
-        padding: 2rem;
-        transition: transform 0.3s ease;
-    }
-    
-    .feature-box:hover {
-        transform: translateY(-5px);
-    }
-    
-    .feature-box h1 {
-        margin-bottom: 1.5rem;
-    }
-    
-    .feature-box h3 {
-        margin-bottom: 2rem;
-    }
-    
-    .feature-box p {
-        margin-bottom: 1rem;
-    }
-    
-    hr {
-        border-top: 2px solid #eee;
-    }
-</style>
+<div class="section-divider"></div>
+
+<div class="container my-5">
+    <div class="row bg-white py-5">
+        <div class="col-md-7">
+            <h2 class="mb-4">Seamless Transition from SUAVE to RCAIDE</h2>
+            
+            <p>
+                RCAIDE is crafted to help SUAVE users effortlessly migrate their projects. Experience familiar workflows enhanced by RCAIDE's modern architecture, intuitive naming conventions, and expanded features.
+            </p>
+            
+            <h3>Trusted by Leading Organizations</h3>
+            <ul class="list-unstyled">
+                <li><strong>Industry & Government:</strong> NASA, Boeing, AFRL, Embraer, Joby, Vahana, Argonne National Labs, Bombardier, Raytheon, BAE, Google</li>
+                <li><strong>Academia:</strong> MIT, Purdue, Embry-Riddle, Carnegie Mellon, Princeton, Virginia Tech, Georgia Tech, Michigan, Stanford, Cranfield, University of Sydney, TU Delft, IIT, University of Toronto, Concordia, ISAE</li>
+            </ul>
+        </div>
+        <div class="col-md-5 d-flex align-items-center">
+            <div class="text-center w-100">
+                <img src="/assets/img/SUAVE_Usage.png" 
+                     alt="SUAVE Usage Statistics" 
+                     class="img-fluid rounded suave-usage"
+                     style="max-width: 100%; height: auto;">
+                <p class="mt-2" style="color: white;">SUAVE Usage Statistics World Map</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="background-color: white; padding: 40px 0; margin: 0; color: black;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header-light regular-pad">Capabilities of RCAIDE</h2>
+                <p class="lead">
+                    RCAIDE currently possesses the ability to perform the following analyses, each at varying levels of fidelity. 
+                    Here, we define fidelity as a level of accuracy to the actual physical value. As the level of fidelity increases, 
+                    so does accuracy. However, this comes with the penalty of computational time and memory. Having multi-fidelity 
+                    capability allows RCAIDE to perform energy network analysis, complete flight vehicle mission analysis, 
+                    multi-fidelity optimization, design space exploration, artificial intelligence, and model-based systems engineering.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-md-6 text-center">
+                <img src="assets/img/Boeing_737.png" 
+                     alt="Boeing 737" 
+                     class="img-fluid rounded mx-auto d-block"
+                     style="margin-bottom: 10px; max-height: 300px; width: auto;">
+                <p class="text-muted mb-3">Boeing 737 Generated by RCAIDE</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="assets/img/Boeing_737_Weight_Breakdown.png" 
+                     alt="Boeing 737 Weight Breakdown" 
+                     class="img-fluid rounded mx-auto d-block"
+                     style="margin-bottom: 10px; max-height: 300px; width: auto;">
+                <p class="text-muted mb-3">Boeing 737 Weight Breakdown</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="background-color: white; padding: 40px 0; margin: 0; color: black;">
+    <div class="container">
+        <div class="col-md-12">
+            <h2 class="header-light regular-pad">External Interfaces</h2>
+            <p class="lead" style="font-size: 19px;">
+                RCAIDE currently supports two external packages, OpenVSP and AVL. Regarding the former, users can automatically 
+                generate OpenVSP geometry from RCAIDE and even read in geometry to perform mission simulations. RCAIDE's AVL 
+                interface enables the automatic generation of AVL files in addition to running AVL directly through the built-in 
+                python API. This allows the designers to focus on design and analysis. Currently, the development team is working 
+                on an API for SU2, a high-fidelity CFD solver. This capability was a feature of SUAVE, and we want to bring it 
+                back for new RCAIDE users.
+            </p>
+            <div class="text-center">
+                <img src="assets/img/Extenal_Interfaces.png" 
+                     alt="External Interfaces" 
+                     class="img-fluid rounded"
+                     style="max-width: 800px; width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 feature-box">
+                <h1><i class="fa fa-cogs" aria-hidden="true"></i></h1>
+                <h3>Verification & Validation</h3>
+                <div style="padding: 20px; text-align: center; background-color: #f8f9fa; border-radius: 5px; margin-bottom: 30px;">
+                    <p style="font-size: 18px; color: #6c757d;">Coming Soon</p>
+                </div>
+            </div>
+            <div class="col-sm-6 feature-box">
+                <h1><i class="fa fa-code-fork" aria-hidden="true"></i></h1>
+                <h3>Release Notes</h3>
+                <div style="padding: 20px; text-align: center; background-color: #f8f9fa; border-radius: 5px; margin-bottom: 30px;">
+                    <p style="font-size: 18px; color: #6c757d;">Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
         </div>
     </div>
