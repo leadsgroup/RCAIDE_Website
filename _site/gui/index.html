@@ -16,8 +16,8 @@
 <meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="GUI" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Under Construction The Graphical User Interface is currently being developed. Will be available soon. View RCAIDE Documentation" />
-<meta property="og:description" content="Under Construction The Graphical User Interface is currently being developed. Will be available soon. View RCAIDE Documentation" />
+<meta name="description" content="RCAIDE GUI is a visual aircraft design, analysis, and mission simulation workspace powered by RCAIDE." />
+<meta property="og:description" content="RCAIDE GUI is a visual aircraft design, analysis, and mission simulation workspace powered by RCAIDE." />
 <link rel="canonical" href="http://localhost:4000/gui/" />
 <meta property="og:url" content="http://localhost:4000/gui/" />
 <meta property="og:site_name" content="L.E.A.D.S" />
@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="GUI" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/gui/","headline":"GUI","dateModified":"2025-03-18T16:16:27+01:00","datePublished":"2025-03-18T16:16:27+01:00","description":"Under Construction The Graphical User Interface is currently being developed. Will be available soon. View RCAIDE Documentation","@type":"WebPage","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/gui/","headline":"GUI","dateModified":"2025-03-18T16:16:27+01:00","datePublished":"2025-03-18T16:16:27+01:00","description":"RCAIDE GUI is a visual aircraft design, analysis, and mission simulation workspace powered by RCAIDE.","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -106,17 +106,678 @@
 
     <div class="page-content">
         <div class="wrapper">
-            <div class="alert alert-warning text-center" role="alert">
-    <h4><i class="fa fa-wrench fa-lg"></i> Under Construction</h4>
-    <p>The Graphical User Interface is currently being developed. Will be available soon.</p>
-    <p>
-        <a href="https://www.docs.rcaide.leadsresearchgroup.com" class="btn btn-warning">
-            <i class="fa fa-book"></i> View RCAIDE Documentation
-        </a>
-    </p>
+<style>
+/* GUI page shell: creates a self-contained dark product surface without changing the rest of the site. */
+.gui-page {
+    color: #f5f8fb;
+    margin: 0;
+    padding: 18px;
+    overflow-x: hidden;
+    background:
+        radial-gradient(circle at 8% 4%, rgba(91, 192, 222, 0.18), transparent 360px),
+        radial-gradient(circle at 92% 20%, rgba(240, 173, 78, 0.12), transparent 300px),
+        linear-gradient(180deg, #06101b 0%, #0b1825 45%, #07101a 100%);
+}
+
+/* Hero panel: the main above-the-fold container with background image, grid texture, and app screenshot. */
+.gui-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 0;
+    margin: 0 0 18px;
+    padding: 56px 34px 34px;
+    background:
+        linear-gradient(120deg, rgba(5, 11, 18, 0.98) 0%, rgba(8, 21, 34, 0.93) 42%, rgba(11, 34, 50, 0.72) 100%),
+        url("/assets/img/background.jpg") center center / cover no-repeat;
+    border: 1px solid rgba(155, 231, 255, 0.2);
+    border-radius: 14px;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.34);
+}
+
+/* Subtle technical grid overlay used only inside the GUI hero. */
+.gui-hero:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(155, 231, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(155, 231, 255, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.16));
+    pointer-events: none;
+}
+
+/* Hero content layout: text/actions on the left, product screenshot on the right. */
+.gui-hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.82fr) minmax(340px, 1.18fr);
+    gap: 34px;
+    align-items: center;
+}
+
+/* Small uppercase labels used for lab identity and section labels. */
+.gui-kicker {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #9be7ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Hero headline and supporting copy. */
+.gui-hero h1 {
+    max-width: 680px;
+    margin: 0 0 20px;
+    font-size: 58px;
+    line-height: 0.96;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.gui-hero p {
+    max-width: 660px;
+    margin-bottom: 26px;
+    color: #d7e4ee;
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+/* Primary call-to-action row. */
+.gui-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.gui-actions .btn {
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.gui-primary {
+    background: #5bc0de;
+    border-color: #5bc0de;
+    color: #06101b;
+}
+
+.gui-primary:hover,
+.gui-primary:focus {
+    background: #9be7ff;
+    border-color: #9be7ff;
+    color: #06101b;
+}
+
+/* Framed screenshot treatment in the hero. */
+.gui-hero-shot {
+    overflow: hidden;
+    padding: 10px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+        rgba(15, 28, 42, 0.9);
+    border: 1px solid rgba(91, 192, 222, 0.36);
+    border-radius: 14px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+}
+
+.gui-hero-shot img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Compact hero signal cards: define, validate, evaluate. */
+.gui-signal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    max-width: 720px;
+    margin-top: 28px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+}
+
+.gui-signal {
+    padding: 16px;
+    background: rgba(20, 35, 48, 0.78);
+}
+
+.gui-signal strong {
+    display: block;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.gui-signal span {
+    color: #b8c8d6;
+    font-size: 13px;
+}
+
+/* Lightweight project links below the hero actions. */
+.gui-quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.gui-quick-links a {
+    color: #9be7ff;
+    font-weight: 700;
+}
+
+.gui-quick-links span {
+    color: rgba(255, 255, 255, 0.42);
+}
+
+/* Reusable section container: visible modern panels scoped to the GUI page. */
+.gui-section {
+    margin-bottom: 18px;
+    padding: 22px 24px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025)),
+        rgba(12, 26, 39, 0.86);
+    border: 1px solid rgba(155, 231, 255, 0.16);
+    border-radius: 14px;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.18);
+}
+
+/* Section header layout: label/title on the left with optional supporting copy on the right. */
+.gui-section-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 16px;
+}
+
+/* Reusable section eyebrow labels. */
+.gui-section-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #9be7ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Shared section typography. */
+.gui-section h2 {
+    margin: 0 0 12px;
+    font-size: 32px;
+    line-height: 1.25;
+}
+
+.gui-section p {
+    color: #cfdae5;
+    font-size: 17px;
+    line-height: 1.62;
+}
+
+/* Intro section two-column layout and lab callout card. */
+.gui-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.gui-intro-callout {
+    align-self: start;
+    padding: 20px;
+    background:
+        linear-gradient(135deg, rgba(91, 192, 222, 0.14), rgba(240, 173, 78, 0.08)),
+        #203141;
+    border-left: 3px solid #f0ad4e;
+    border-radius: 8px;
+}
+
+.gui-intro-callout a {
+    color: #9be7ff;
+    font-weight: 700;
+}
+
+/* Workflow cards: three compact phases for the GUI process. */
+.gui-workflow {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    background: transparent;
+    border: 0;
+}
+
+.gui-workflow-step {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 18px 20px;
+    background:
+        linear-gradient(180deg, rgba(91, 192, 222, 0.08), transparent),
+        #203141;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.gui-workflow-step span {
+    color: #9be7ff;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Application tour rows: alternating screenshot/text layout for each GUI tab. */
+.gui-tour-item {
+    display: grid;
+    grid-template-columns: minmax(270px, 0.78fr) minmax(0, 1.22fr);
+    align-items: center;
+    margin-top: 10px;
+    overflow: hidden;
+    max-width: 100%;
+    background: rgba(32, 49, 65, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.22);
+    transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.gui-tour-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(155, 231, 255, 0.42);
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 0.3);
+}
+
+.gui-tour-item:nth-child(even) {
+    grid-template-columns: minmax(0, 1.22fr) minmax(270px, 0.78fr);
+}
+
+.gui-tour-item:nth-child(even) .gui-tour-copy {
+    order: 2;
+}
+
+/* Compact text panel inside each application tour row. */
+.gui-tour-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 20px;
+    margin: 18px 22px;
+    align-self: center;
+    background: rgba(12, 26, 39, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+}
+
+.gui-tour-index {
+    margin-bottom: 8px;
+    color: #f0ad4e;
+    font-weight: 700;
+}
+
+.gui-tour-copy h3 {
+    margin: 0 0 8px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.gui-tour-copy p {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+/* Tour screenshots: fixed-height previews that keep rows compact and aligned. */
+.gui-tour-item img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    min-height: 245px;
+    object-fit: cover;
+    background: #142331;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.gui-tour-item img[alt="Geometry Visualization tab"] {
+    object-position: center center;
+}
+
+/* Benefit cards under "Why Use It?" */
+.gui-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.gui-feature {
+    min-height: 150px;
+    padding: 24px;
+    background:
+        linear-gradient(145deg, rgba(91, 192, 222, 0.08), rgba(255, 255, 255, 0.02)),
+        #203141;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+}
+
+.gui-feature strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.gui-feature span {
+    color: #cfdae5;
+}
+
+/* Quick Start command cards. */
+.gui-command-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.gui-command {
+    padding: 18px;
+    background:
+        linear-gradient(180deg, rgba(155, 231, 255, 0.06), transparent),
+        #203141;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+}
+
+.gui-command span {
+    display: block;
+    margin-bottom: 10px;
+    color: #b8c8d6;
+    font-weight: 700;
+}
+
+.gui-command code {
+    display: block;
+    padding: 10px 12px;
+    overflow-x: auto;
+    color: #e9f7ff;
+    background: #111923;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Responsive layout: collapse all GUI grids into a single column on tablets. */
+@media (max-width: 991px) {
+    .gui-hero-grid,
+    .gui-intro,
+    .gui-tour-item,
+    .gui-tour-item:nth-child(even),
+    .gui-command-grid,
+    .gui-feature-grid,
+    .gui-workflow {
+        grid-template-columns: 1fr;
+    }
+
+    .gui-tour-item:nth-child(even) .gui-tour-copy {
+        order: 0;
+    }
+
+    .gui-signal-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile spacing and type adjustments for the GUI page. */
+@media (max-width: 640px) {
+    .gui-page {
+        padding: 10px;
+    }
+
+    .gui-section {
+        padding: 18px;
+    }
+
+    .gui-hero {
+        min-height: auto;
+        padding: 36px 20px 22px;
+    }
+
+    .gui-hero h1 {
+        font-size: 38px;
+    }
+
+    .gui-hero p {
+        font-size: 16px;
+    }
+
+    .gui-section-header {
+        display: block;
+    }
+
+    .gui-tour-item img {
+        min-height: 190px;
+    }
+}
+</style>
+
+<div class="gui-page">
+    <!-- Hero: introduces the GUI as a polished RCAIDE desktop workspace. -->
+    <section class="gui-hero">
+        <div class="gui-hero-grid">
+            <div>
+                <span class="gui-kicker">Laboratory for Emerging Aircraft and Design</span>
+                <h1>A desktop command center for aircraft design studies.</h1>
+                <p>RCAIDE GUI turns the RCAIDE research workflow into a guided visual workspace for defining aircraft, validating geometry, configuring analyses, and running mission simulations.</p>
+                <div class="gui-actions">
+                    <a href="https://pypi.org/project/RCAIDE-GUI/" class="btn btn-lg gui-primary">
+                        <i class="fa fa-download"></i> Download GUI
+                    </a>
+                    <a href="https://www.docs.rcaide.leadsresearchgroup.com" class="btn btn-lg btn-default">
+                        <i class="fa fa-book"></i> Documentation
+                    </a>
+                </div>
+                <div class="gui-quick-links">
+                    <a href="https://github.com/leadsgroup/RCAIDE_GUI">GitHub</a>
+                    <span>|</span>
+                    <a href="https://pypi.org/project/RCAIDE-GUI/">PyPI</a>
+                    <span>|</span>
+                    <a href="https://www.leadsresearchgroup.com/">LEADS</a>
+                </div>
+                <div class="gui-signal-grid">
+                    <div class="gui-signal">
+                        <strong>Define</strong>
+                        <span>Vehicle components and configurations</span>
+                    </div>
+                    <div class="gui-signal">
+                        <strong>Validate</strong>
+                        <span>Geometry, layout, and mission setup</span>
+                    </div>
+                    <div class="gui-signal">
+                        <strong>Evaluate</strong>
+                        <span>RCAIDE solver outputs and trends</span>
+                    </div>
+                </div>
+            </div>
+            <div class="gui-hero-shot">
+                <img src="/assets/img/gui-home.png" alt="RCAIDE GUI home screen">
+            </div>
+        </div>
+    </section>
+
+    <!-- Research workspace overview: explains what the GUI does and who maintains it. -->
+    <section class="gui-section">
+        <div class="gui-intro">
+          <div>
+            <span class="gui-section-label">Research workspace</span>
+            <h2>Built for research iteration, not just documentation.</h2>
+            <p>RCAIDE GUI gives engineers, researchers, and students a visual layer over RCAIDE's aircraft design ecosystem. It keeps vehicle setup, configuration, mission construction, simulation, and result review connected in one desktop environment.</p>
+            <p>Each interface area supports a specific step in the aircraft design workflow, from defining geometry to reviewing mission output.</p>
+          </div>
+          <div class="gui-intro-callout">
+            <p>Developed and maintained by the Laboratory for Emerging Aircraft and Design.</p>
+            <a href="https://www.leadsresearchgroup.com/">Visit LEADS</a>
+          </div>
+        </div>
+    </section>
+
+    <!-- Workflow: summarizes the GUI process in three compact phases. -->
+    <section class="gui-section">
+        <div class="gui-section-header">
+          <div>
+            <span class="gui-section-label">Workflow</span>
+            <h2>Workflow</h2>
+          </div>
+          <p>Three compact phases organize the GUI around model definition, analysis setup, and result review.</p>
+        </div>
+        <div class="gui-workflow">
+            <div class="gui-workflow-step"><span>01 / Model</span>Vehicle Setup and Geometry Visualization</div>
+            <div class="gui-workflow-step"><span>02 / Configure</span>Operating States, Analyses, and Mission Definition</div>
+            <div class="gui-workflow-step"><span>03 / Assess</span>Mission Simulation, Results Viewer, and Exportable Outputs</div>
+        </div>
+    </section>
+
+    <!-- Application tour: shows each major GUI tab with its screenshot and purpose. -->
+    <section class="gui-section">
+        <div class="gui-section-header">
+          <div>
+            <span class="gui-section-label">Desktop surface</span>
+            <h2>Interface Modules</h2>
+          </div>
+          <p>Each module is a focused working area with its own job in the design study.</p>
+        </div>
+
+        <!-- Vehicle Setup module. -->
+        <article class="gui-tour-item">
+            <div class="gui-tour-copy">
+                <span class="gui-tour-index">01</span>
+                <h3>Vehicle Setup</h3>
+                <p>Build aircraft geometry through a component-based workflow, adding wings, fuselages, landing gear, propulsors, booms, and other vehicle components while keeping the design parameters organized.</p>
+            </div>
+            <img src="/assets/img/gui-vehicle-setup.png" alt="Vehicle Setup tab">
+        </article>
+
+        <!-- Geometry Visualization module. -->
+        <article class="gui-tour-item">
+            <div class="gui-tour-copy">
+                <span class="gui-tour-index">02</span>
+                <h3>Geometry Visualization</h3>
+                <p>Inspect aircraft geometry in a dedicated 3D VTK environment with interactive rotation, zooming, measurement tools, customizable colors, transparency controls, predefined views, and image export.</p>
+            </div>
+            <img src="/assets/img/gui-geometry-visualization-current.png" alt="Geometry Visualization tab">
+        </article>
+
+        <!-- Configurations Setup module. -->
+        <article class="gui-tour-item">
+            <div class="gui-tour-copy">
+                <span class="gui-tour-index">03</span>
+                <h3>Configurations Setup</h3>
+                <p>Define aircraft operating states for takeoff, cruise, landing, and custom mission conditions, including control surface deflections, landing gear deployment, and active propulsion systems.</p>
+            </div>
+            <img src="/assets/img/gui-configurations.png" alt="Configurations Setup tab">
+        </article>
+
+        <!-- Analyses Setup module. -->
+        <article class="gui-tour-item">
+            <div class="gui-tour-copy">
+                <span class="gui-tour-index">04</span>
+                <h3>Analyses Setup</h3>
+                <p>Configure aerodynamic methods, atmospheric models, weight estimation approaches, and aeroacoustic settings through controls that mirror RCAIDE's analysis framework.</p>
+            </div>
+            <img src="/assets/img/gui-analyses.png" alt="Analyses Setup tab">
+        </article>
+
+        <!-- Mission Setup module. -->
+        <article class="gui-tour-item">
+            <div class="gui-tour-copy">
+                <span class="gui-tour-index">05</span>
+                <h3>Mission Setup</h3>
+                <p>Create complete flight profiles by chaining takeoff, climb, cruise, descent, and landing segments with specific operating conditions, solver settings, control points, configurations, and analyses.</p>
+            </div>
+            <img src="/assets/img/gui-mission-setup.png" alt="Mission Setup tab">
+        </article>
+
+        <!-- Mission Simulation module. -->
+        <article class="gui-tour-item">
+            <div class="gui-tour-copy">
+                <span class="gui-tour-index">06</span>
+                <h3>Mission Simulation</h3>
+                <p>Execute RCAIDE solvers and review plots, numerical outputs, performance metrics, fuel burn, range, energy consumption, flight time, and stability characteristics.</p>
+            </div>
+            <img src="/assets/img/gui-mission-simulation.png" alt="Mission Simulation tab">
+        </article>
+
+        <!-- Results Viewer module. -->
+        <article class="gui-tour-item">
+            <div class="gui-tour-copy">
+                <span class="gui-tour-index">07</span>
+                <h3>Results Viewer</h3>
+                <p>Open saved mission simulation output without rerunning the mission. The viewer works like a MATLAB-style data parser, letting users browse result variables, inspect data traces, and review mission outputs after a run is complete.</p>
+            </div>
+            <img src="/assets/img/gui-results-viewer.png" alt="Results Viewer tab">
+        </article>
+    </section>
+
+    <!-- Benefits: short value statements for why users would choose the GUI. -->
+    <section class="gui-section">
+        <div class="gui-section-header">
+          <div>
+            <span class="gui-section-label">Why it matters</span>
+            <h2>Why Use It?</h2>
+          </div>
+        </div>
+        <div class="gui-feature-grid">
+            <div class="gui-feature">
+                <strong>Visual aircraft setup</strong>
+                <span>Create and modify complex aircraft models without hand-writing setup scripts.</span>
+            </div>
+            <div class="gui-feature">
+                <strong>Live geometry feedback</strong>
+                <span>Catch sizing, placement, and configuration issues early in the design process.</span>
+            </div>
+            <div class="gui-feature">
+                <strong>Connected analysis workflow</strong>
+                <span>Move from geometry to configurations, analyses, missions, and results in one desktop environment.</span>
+            </div>
+            <div class="gui-feature">
+                <strong>RCAIDE integration</strong>
+                <span>Use the same open-source design and analysis ecosystem behind scripted RCAIDE workflows.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start: installation and launch commands. -->
+    <section class="gui-section">
+        <div class="gui-section-header">
+          <div>
+            <span class="gui-section-label">Install</span>
+            <h2>Quick Start</h2>
+          </div>
+        </div>
+        <div class="gui-command-grid">
+            <div class="gui-command">
+                <span>Install from PyPI</span>
+                <code>pip install RCAIDE-GUI</code>
+            </div>
+            <div class="gui-command">
+                <span>Launch the desktop app</span>
+                <code>rcaide-gui</code>
+            </div>
+            <div class="gui-command">
+                <span>Run from source</span>
+                <code>python main.py</code>
+            </div>
+        </div>
+    </section>
 </div>
 
-<p><img src="/assets/img/under_construction.png" alt="Under Construction" class="img-responsive" style="max-width: 200px; margin: 0 auto;" /></p>
+
+
+
 
         </div>
     </div>
@@ -125,8 +786,8 @@
     <div class="container">
 
         <p class="text-center">
-            L.E.A.D.S 2024 |
-            Powered by <a href="https://www.leadsresearchgroup.com">Laboratory for Electric Aircraft Design and Sustainability</a>
+            L.E.A.D.S 2026 |
+            Powered by <a href="https://www.leadsresearchgroup.com">Laboratory for Emerging Aircraft and Design</a>
         </p>
         <p class="text-center">
             Built with <a href="https://jekyllrb.com">Jekyll</a> 
