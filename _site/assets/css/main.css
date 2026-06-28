@@ -2371,7 +2371,7 @@ body { padding-top: 61px; margin-bottom: 46px; }
 
 .page-content { padding-bottom: 20px; }
 
-.footer { position: absolute; bottom: 0; width: 100%; padding-top: 10px; background-color: #EBEBEB; color: #333333; }
+.footer { position: static; width: 100%; margin-top: 28px; padding: 12px 0; background-color: #EBEBEB; color: #333333; }
 
 .post-list-container li a.active { font-weight: bold; }
 

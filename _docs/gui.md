@@ -11,6 +11,7 @@ permalink: /gui/
     color: #f5f8fb;
     margin: 0;
     padding: 18px;
+    padding-bottom: 96px;
     overflow-x: hidden;
     background:
         radial-gradient(circle at 8% 4%, rgba(91, 192, 222, 0.18), transparent 360px),
@@ -235,6 +236,26 @@ permalink: /gui/
         #203141;
     border-left: 3px solid #f0ad4e;
     border-radius: 8px;
+}
+
+/* UIUC affiliation lockup: keeps university identity visible inside the GUI page. */
+.gui-affiliation {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 16px;
+    align-items: center;
+}
+
+.gui-affiliation img {
+    width: 104px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.35));
+}
+
+.gui-affiliation p {
+    margin: 0 0 10px;
 }
 
 .gui-intro-callout a {
@@ -518,8 +539,13 @@ permalink: /gui/
             <p>Each interface area supports a specific step in the aircraft design workflow, from defining geometry to reviewing mission output.</p>
           </div>
           <div class="gui-intro-callout">
-            <p>Developed and maintained by the Laboratory for Emerging Aircraft and Design.</p>
-            <a href="https://www.leadsresearchgroup.com/">Visit LEADS</a>
+            <div class="gui-affiliation">
+              <img src="/assets/img/UIUC.png" alt="University of Illinois Urbana-Champaign logo">
+              <div>
+                <p>Developed by the Laboratory for Emerging Aircraft and Design at the University of Illinois Urbana-Champaign.</p>
+                <a href="https://www.leadsresearchgroup.com/">Visit LEADS</a>
+              </div>
+            </div>
           </div>
         </div>
     </section>
@@ -672,4 +698,5 @@ permalink: /gui/
             </div>
         </div>
     </section>
+    <div class="gui-footer-spacer" aria-hidden="true"></div>
 </div>

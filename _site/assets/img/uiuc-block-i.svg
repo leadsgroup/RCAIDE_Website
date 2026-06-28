@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171 173" role="img" aria-labelledby="title desc">
+  <title id="title">University of Illinois Block I</title>
+  <desc id="desc">Orange Block I logo on a navy background.</desc>
+  <rect width="171" height="173" fill="#1d2d4d"/>
+  <path d="M46 29h79v31H99v54h26v31H46v-31h26V60H46z" fill="#fff"/>
+  <path d="M51 34h69v21H94v64h26v21H51v-21h26V55H51z" fill="#ff5f05"/>
+</svg>
