@@ -490,7 +490,7 @@ permalink: /gui/
     <section class="gui-hero">
         <div class="gui-hero-grid">
             <div>
-                <span class="gui-kicker">Laboratory for Emerging Aircraft and Design</span>
+                <span class="gui-kicker">Laboratory for Emerging Aircraft Design and Systems</span>
                 <h1>A desktop command center for aircraft design studies.</h1>
                 <p>RCAIDE GUI turns the RCAIDE research workflow into a guided visual workspace for defining aircraft, validating geometry, configuring analyses, and running mission simulations.</p>
                 <div class="gui-actions">
@@ -542,7 +542,7 @@ permalink: /gui/
             <div class="gui-affiliation">
               <img src="/assets/img/UIUC.png" alt="University of Illinois Urbana-Champaign logo">
               <div>
-                <p>Developed by the Laboratory for Emerging Aircraft and Design at the University of Illinois Urbana-Champaign.</p>
+                <p>Developed by the Laboratory for Emerging Aircraft Design and Systems at the University of Illinois Urbana-Champaign.</p>
                 <a href="https://www.leadsresearchgroup.com/">Visit LEADS</a>
               </div>
             </div>
