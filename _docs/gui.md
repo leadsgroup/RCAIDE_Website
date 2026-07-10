@@ -698,5 +698,4 @@ permalink: /gui/
             </div>
         </div>
     </section>
-    <div class="gui-footer-spacer" aria-hidden="true"></div>
 </div>
