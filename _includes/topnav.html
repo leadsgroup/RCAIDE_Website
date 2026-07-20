@@ -22,6 +22,9 @@
                 <li {% if page.sectionid=='About' %} class="active" {% endif %}><a href="https://www.leadsresearchgroup.com">About Us</a></li>
             </ul>
             <div class="navbar-right">
+                <a class="uiuc-navbar-mark" href="https://illinois.edu/" aria-label="University of Illinois Urbana-Champaign">
+                    <img src="{{ "/assets/img/uiuc-block-i.svg" | relative_url }}" alt="University of Illinois Block I">
+                </a>
                 <ul class="nav navbar-nav">
                     <li><a href="https://x.com/leadsresearch"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                     <li><a href="https://www.youtube.com/@LEADSresearch"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
@@ -62,5 +65,23 @@
 
 .navbar-toggle {
     margin-top: 10px;
+}
+
+.uiuc-navbar-mark {
+    display: inline-flex;
+    align-items: center;
+    height: 55px;
+    padding: 0 14px;
+}
+
+.uiuc-navbar-mark img {
+    height: 42px;
+    width: auto;
+}
+
+@media (max-width: 767px) {
+    .uiuc-navbar-mark {
+        display: none;
+    }
 }
 </style>

@@ -18,17 +18,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="RCAIDE" />
 <meta property="og:description" content="RCAIDE" />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
+<link rel="canonical" href="https://www.rcaide.leadsresearchgroup.com/" />
+<meta property="og:url" content="https://www.rcaide.leadsresearchgroup.com/" />
 <meta property="og:site_name" content="L.E.A.D.S" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="L.E.A.D.S" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/","headline":"L.E.A.D.S","name":"L.E.A.D.S","description":"RCAIDE","@type":"WebSite","@context":"https://schema.org"}</script>
+{"url":"https://www.rcaide.leadsresearchgroup.com/","headline":"L.E.A.D.S","name":"L.E.A.D.S","description":"RCAIDE","@type":"WebSite","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="alternate" type="application/rss+xml" title="L.E.A.D.S" href="http://localhost:4000/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="L.E.A.D.S" href="https://www.rcaide.leadsresearchgroup.com/feed.xml" />
 </head>
 
 
@@ -58,6 +58,9 @@
                 <li ><a href="https://www.leadsresearchgroup.com">About Us</a></li>
             </ul>
             <div class="navbar-right">
+                <a class="uiuc-navbar-mark" href="https://illinois.edu/" aria-label="University of Illinois Urbana-Champaign">
+                    <img src="/assets/img/uiuc-block-i.svg" alt="University of Illinois Block I">
+                </a>
                 <ul class="nav navbar-nav">
                     <li><a href="https://x.com/leadsresearch"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                     <li><a href="https://www.youtube.com/@LEADSresearch"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
@@ -100,6 +103,24 @@
     margin-top: 10px;
 }
 
+.uiuc-navbar-mark {
+    display: inline-flex;
+    align-items: center;
+    height: 55px;
+    padding: 0 14px;
+}
+
+.uiuc-navbar-mark img {
+    height: 42px;
+    width: auto;
+}
+
+@media (max-width: 767px) {
+    .uiuc-navbar-mark {
+        display: none;
+    }
+}
+
 .img-fluid {
     margin: 20px auto;
 }
@@ -108,6 +129,46 @@
     background: linear-gradient(to right, transparent, #007bff, transparent);
     margin: 2rem 0;
     width: 100%;
+}
+
+.illinois-feature {
+    background: linear-gradient(135deg, #13294b 0%, #1b3a66 100%);
+    color: #ffffff;
+    border-top: 4px solid #ff5f05;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 28px 0;
+}
+
+.illinois-feature-inner {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.illinois-feature img {
+    width: 86px;
+    height: auto;
+    flex: 0 0 auto;
+}
+
+.illinois-feature p {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.45;
+}
+
+@media (max-width: 767px) {
+    .illinois-feature-inner {
+        align-items: flex-start;
+    }
+
+    .illinois-feature img {
+        width: 66px;
+    }
+
+    .illinois-feature p {
+        font-size: 17px;
+    }
 }
 </style>
 
@@ -121,6 +182,13 @@
         <p><a class="btn btn-primary btn-lg" href="https://www.docs.rcaide.leadsresearchgroup.com/install.html" role="button">Download</a></p>
     </div>
 </div>
+
+<section class="illinois-feature">
+    <div class="container illinois-feature-inner">
+        <img src="/assets/img/uiuc-block-i.svg" alt="University of Illinois Block I">
+        <p>Developed by the Laboratory for Emerging Aircraft Design and Systems at the University of Illinois Urbana-Champaign.</p>
+    </div>
+</section>
 
 <div class="row">
     <div class="container">
@@ -292,13 +360,22 @@
     <footer class="footer">
     <div class="container">
 
+                <div class="footer-affiliation">
+            <img src="/assets/img/uiuc-block-i.svg" alt="University of Illinois Block I">
+            <p>
+                Developed by the Laboratory for Emerging Aircraft Design and Systems at the University of Illinois Urbana-Champaign.
+            </p>
+        </div>
         <p class="text-center">
-            L.E.A.D.S 2025 |
-            Powered by <a href="https://www.leadsresearchgroup.com">Laboratory for Electric Aircraft Design and Sustainability</a>
+            L.E.A.D.S 2026 |
+            Powered by <a href="https://www.leadsresearchgroup.com">Laboratory for Emerging Aircraft Design and Systems</a>
         </p>
-        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+        <p class="text-center">
+            Built with <a href="https://jekyllrb.com">Jekyll</a> 
+        </p>
     </div>
 </footer>
+
 
     <script>
   var baseurl = ''
