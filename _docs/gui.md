@@ -645,6 +645,37 @@ permalink: /gui/
             </div>
             <img src="/assets/img/gui-results-viewer.png" alt="Results Viewer tab">
         </article>
+
+        <!-- Performance module. -->
+        <article class="gui-tour-item">
+            <div class="gui-tour-copy">
+                <span class="gui-tour-index">08</span>
+                <h3>Performance</h3>
+                <p>Evaluate aircraft-level performance metrics without constructing a full mission profile. Generate payload-range diagrams, V-n diagrams, takeoff and landing field length estimates, and aerodynamic polar sweeps for rapid design-space exploration.</p>
+            </div>
+            <img src="/assets/img/gui-performance.png" alt="Performance tab">
+        </article>
+    </section>
+
+    <!-- Roadmap: upcoming modules. -->
+    <section class="gui-section">
+        <div class="gui-section-header">
+          <div>
+            <span class="gui-section-label">Coming soon</span>
+            <h2>Roadmap</h2>
+          </div>
+          <p>The next two interface modules currently in development.</p>
+        </div>
+        <div class="gui-feature-grid">
+            <div class="gui-feature">
+                <strong>Optimization</strong>
+                <span>A dedicated tab for running multi-variable design studies and trade-space exploration directly from the GUI, integrated with RCAIDE's optimization framework.</span>
+            </div>
+            <div class="gui-feature">
+                <strong>AI Agent</strong>
+                <span>A conversational AI assistant embedded in the GUI that can interpret design goals, suggest configurations, flag analysis anomalies, and help users navigate the RCAIDE workflow.</span>
+            </div>
+        </div>
     </section>
 
     <!-- Benefits: short value statements for why users would choose the GUI. -->
