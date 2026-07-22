@@ -645,6 +645,16 @@ permalink: /gui/
             </div>
             <img src="/assets/img/gui-results-viewer.png" alt="Results Viewer tab">
         </article>
+
+        <!-- Performance module. -->
+        <article class="gui-tour-item">
+            <div class="gui-tour-copy">
+                <span class="gui-tour-index">08</span>
+                <h3>Performance</h3>
+                <p>Evaluate aircraft-level performance metrics without constructing a full mission profile. Generate payload-range diagrams, V-n diagrams, takeoff and landing field length estimates, and aerodynamic polar sweeps for rapid design-space exploration.</p>
+            </div>
+            <img src="/assets/img/gui-performance.png" alt="Performance tab">
+        </article>
     </section>
 
     <!-- Benefits: short value statements for why users would choose the GUI. -->
