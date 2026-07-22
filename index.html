@@ -11,6 +11,7 @@
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
     <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>L.E.A.D.S | RCAIDE</title>
 <meta name="generator" content="Jekyll v3.9.0" />
@@ -44,7 +45,7 @@
         <span class="icon-bar"></span>
       </button>
             <a class="navbar-brand" href="/">
-                <span><img src="/assets/img/leads_logo.png" alt="Logo"></span> L.E.A.D.S
+                <span><img src="/assets/img/leads_logo.png" alt="Logo"></span> LEADS
             </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
@@ -62,7 +63,7 @@
                     <img src="/assets/img/uiuc-block-i.svg" alt="University of Illinois Block I">
                 </a>
                 <ul class="nav navbar-nav">
-                    <li><a href="https://x.com/leadsresearch"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://x.com/leadsresearch" aria-label="X (formerly Twitter)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="14" height="14" style="vertical-align:middle;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.213 5.567 5.951-5.567zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
                     <li><a href="https://www.youtube.com/@LEADSresearch"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                     <li><a href="https://github.com/leadsgroup"><i class="fa fa-github" aria-hidden="true"></i></a></li>
                 </ul>
@@ -218,63 +219,137 @@
 <div class="container my-5">
     <div class="row bg-white py-5">
         <div class="col-md-7">
-            <h2 class="mb-4">Seamless Transition from SUAVE to RCAIDE</h2>
-            
+            <h2 class="mb-4">Adopted Worldwide</h2>
+
             <p class="lead" style="font-size: 19px;">
-                RCAIDE is crafted to help SUAVE users effortlessly migrate their projects. Experience familiar workflows enhanced by RCAIDE's modern architecture, intuitive naming conventions, and expanded features.
+                RCAIDE has been adopted by aerospace engineers and researchers across industry, government, and academia worldwide. Building on the legacy of SUAVE — one of the most widely used open-source aircraft design tools — RCAIDE delivers modern architecture, expanded capabilities, and long-term maintainability.
             </p>
-            
+
             <h3>Trusted by Leading Organizations</h3>
-            <ul class="list-unstyled"  style="font-size: 19px;">
+            <ul class="list-unstyled" style="font-size: 19px;">
                 <li><strong>Industry & Government:</strong> NASA, Boeing, AFRL, Embraer, Joby, Vahana, Argonne National Labs, Bombardier, Raytheon, BAE, Google</li>
                 <li><strong>Academia:</strong> MIT, Purdue, Embry-Riddle, Carnegie Mellon, Princeton, Virginia Tech, Georgia Tech, Michigan, Stanford, Cranfield, University of Sydney, TU Delft, IIT, University of Toronto, Concordia, ISAE</li>
             </ul>
         </div>
         <div class="col-md-5 d-flex align-items-center">
             <div class="text-center w-100">
-                <img src="/assets/img/SUAVE_Usage.png" 
-                     alt="SUAVE Usage Statistics" 
-                     class="img-fluid rounded suave-usage"
+                <img src="/assets/img/RCAIDE_Worldwide_Downloads.png"
+                     alt="RCAIDE Worldwide Downloads"
+                     class="img-fluid rounded"
                      style="max-width: 100%; height: auto;">
-                <p class="mt-2" style="color: white;">SUAVE Usage Statistics World Map</p>
+                <p class="mt-2" style="color: white;">RCAIDE Worldwide Downloads</p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row" style="background-color: white; padding: 40px 0; margin: 0; color: black;">
+<div class="row" style="background: #0d1117; padding: 60px 0; margin: 0;">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="header-light regular-pad">Capabilities of RCAIDE</h2>
-                <p class="lead" style="font-size: 19px;">
-                    RCAIDE currently possesses the ability to perform the following analyses, each at varying levels of fidelity. 
-                    Here, we define fidelity as a level of accuracy to the actual physical value. As the level of fidelity increases, 
-                    so does accuracy. However, this comes with the penalty of computational time and memory. Having multi-fidelity 
-                    capability allows RCAIDE to perform energy network analysis, complete flight vehicle mission analysis, 
-                    multi-fidelity optimization, design space exploration, artificial intelligence, and model-based systems engineering.
-                </p>
-            </div>
+        <h2 style="color: white; text-align: center; margin-bottom: 8px; font-size: 2em;">Digital Hangar</h2>
+        <p style="color: #94a3b8; text-align: center; font-size: 18px; margin-bottom: 36px;">
+            Explore aerospace vehicles modeled and analyzed with RCAIDE
+        </p>
+
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 28px;">
+            <button class="hangar-tab active" onclick="selectAircraft(0)">Boeing 787</button>
+            <button class="hangar-tab" onclick="selectAircraft(1)">BWB&#8209;LH&#8322;</button>
+            <button class="hangar-tab" onclick="selectAircraft(2)">Concorde</button>
+            <button class="hangar-tab" onclick="selectAircraft(3)">Tiltrotor eVTOL</button>
+            <button class="hangar-tab" onclick="selectAircraft(4)">ATR&#8209;72 Cryo</button>
+            <button class="hangar-tab" onclick="selectAircraft(5)">F&#8209;22 Raptor</button>
         </div>
-        
-        <div class="row mt-4">
-            <div class="col-md-6 text-center">
-                <img src="assets/img/Boeing_737.png" 
-                     alt="Boeing 737" 
-                     class="img-fluid rounded mx-auto d-block"
-                     style="margin-bottom: 10px; max-height: 300px; width: auto;">
-                <p class="text-muted mb-3">Boeing 737 Generated by RCAIDE</p>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="assets/img/Boeing_737_Weight_Breakdown.png" 
-                     alt="Boeing 737 Weight Breakdown" 
-                     class="img-fluid rounded mx-auto d-block"
-                     style="margin-bottom: 10px; max-height: 300px; width: auto;">
-                <p class="text-muted mb-3">Boeing 737 Weight Breakdown</p>
-            </div>
+
+        <div style="max-width: 960px; margin: 0 auto; border-radius: 16px; overflow: hidden; background: #161b27; border: 1px solid rgba(255,255,255,0.07); box-shadow: 0 8px 40px rgba(0,0,0,0.5);">
+            <model-viewer
+                id="hangar-viewer"
+                src="https://raw.githubusercontent.com/leadsgroup/RCAIDE_LEADS/main/Digital_Hangar/Boeing_787/Boeing_787_8.gltf"
+                camera-controls
+                auto-rotate
+                auto-rotate-delay="1000"
+                rotation-per-second="20deg"
+                shadow-intensity="0.4"
+                exposure="1.1"
+                style="width: 100%; height: 520px; background: transparent;"
+                alt="Boeing 787-8 Dreamliner">
+                <div slot="progress-bar" style="display:none;"></div>
+            </model-viewer>
+        </div>
+
+        <div style="text-align: center; margin-top: 22px;">
+            <h4 id="hangar-name" style="color: #7dd3fc; margin: 0; font-size: 1.2em; letter-spacing: 0.01em;">Boeing 787-8 Dreamliner</h4>
+            <p id="hangar-desc" style="color: #64748b; margin: 6px 0 0 0; font-size: 15px;">Long-haul commercial transport &middot; Twin turbofan</p>
         </div>
     </div>
 </div>
+
+<style>
+.hangar-tab {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.10);
+    color: #94a3b8;
+    padding: 8px 22px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.hangar-tab:hover {
+    background: rgba(125,211,252,0.10);
+    border-color: rgba(125,211,252,0.4);
+    color: #7dd3fc;
+}
+.hangar-tab.active {
+    background: rgba(125,211,252,0.15);
+    border-color: #7dd3fc;
+    color: #7dd3fc;
+}
+</style>
+
+<script>
+var _aircraft = [
+    {
+        name: "Boeing 787-8 Dreamliner",
+        desc: "Long-haul commercial transport · Twin turbofan",
+        src: "https://raw.githubusercontent.com/leadsgroup/RCAIDE_LEADS/main/Digital_Hangar/Boeing_787/Boeing_787_8.gltf"
+    },
+    {
+        name: "Blended Wing Body — Liquid Hydrogen",
+        desc: "Next-generation ultra-efficient transport · Cryogenic LH₂ propulsion",
+        src: "https://raw.githubusercontent.com/leadsgroup/RCAIDE_LEADS/main/Digital_Hangar/Blended_Wing_Body_Hydrogen/BWB_LH2.gltf"
+    },
+    {
+        name: "Concorde",
+        desc: "Supersonic commercial transport · Turbojet, Mach 2.04",
+        src: "https://raw.githubusercontent.com/leadsgroup/RCAIDE_LEADS/main/Digital_Hangar/Concorde/Concorde.gltf"
+    },
+    {
+        name: "Tiltrotor eVTOL",
+        desc: "Urban air mobility · Fully electric, distributed propulsion",
+        src: "https://raw.githubusercontent.com/leadsgroup/RCAIDE_LEADS/main/Digital_Hangar/Tiltrotor_EVTOL/Tiltrotor.gltf"
+    },
+    {
+        name: "ATR-72 Cryo Parallel Hybrid",
+        desc: "Regional turboprop · Cryogenic hydrogen parallel hybrid electric",
+        src: "https://raw.githubusercontent.com/leadsgroup/RCAIDE_LEADS/main/Digital_Hangar/ATR_72_Parallel_Hybrid/ATR_72_parallel_hybrid_electric.gltf"
+    },
+    {
+        name: "Lockheed F-22 Raptor",
+        desc: "5th-generation air superiority fighter · Twin F119 turbofan, supercruise capable",
+        src: "https://raw.githubusercontent.com/leadsgroup/RCAIDE_LEADS/release_readme_improvements/Digital_Hangar/Lockheed_F22/Lockheed_F22.gltf"
+    }
+];
+
+function selectAircraft(index) {
+    var a = _aircraft[index];
+    document.getElementById('hangar-viewer').setAttribute('src', a.src);
+    document.getElementById('hangar-name').textContent = a.name;
+    document.getElementById('hangar-desc').innerHTML = a.desc;
+    document.querySelectorAll('.hangar-tab').forEach(function(tab, i) {
+        tab.classList.toggle('active', i === index);
+    });
+}
+</script>
 
 <div class="row" style="background-color: white; padding: 40px 0; margin: 0; color: black;">
     <div class="container">
@@ -337,16 +412,20 @@
             <div class="col-sm-6 feature-box">
                 <h1><i class="fa fa-cogs" aria-hidden="true"></i></h1>
                 <h3>Verification & Validation</h3>
-                <div style="padding: 20px; text-align: center; background-color: #f8f9fa; border-radius: 5px; margin-bottom: 30px;">
-                    <p style="font-size: 18px; color: #6c757d;">Coming Soon</p>
-                </div>
+                <p style="font-size: 18px;">
+                    RCAIDE's methods are validated against experimental data and high-fidelity simulations.
+                    Aerodynamic predictions achieve R² = 0.96 (C<sub>L</sub>) and R² = 0.94 (C<sub>D</sub>)
+                    against NASA wind-tunnel data for the Common Research Model.
+                </p>
+                <a href="https://doi.org/10.1016/j.ast.2026.112328" class="btn btn-primary" target="_blank">Read the Paper</a>
             </div>
             <div class="col-sm-6 feature-box">
                 <h1><i class="fa fa-code-fork" aria-hidden="true"></i></h1>
                 <h3>Release Notes</h3>
-                <div style="padding: 20px; text-align: center; background-color: #f8f9fa; border-radius: 5px; margin-bottom: 30px;">
-                    <p style="font-size: 18px; color: #6c757d;">Coming Soon</p>
-                </div>
+                <p style="font-size: 18px;">
+                    View the full version history, changelog, and all published releases of RCAIDE on PyPI.
+                </p>
+                <a href="https://pypi.org/project/RCAIDE-LEADS/#history" class="btn btn-primary" target="_blank">View on PyPI</a>
             </div>
         </div>
     </div>
@@ -367,7 +446,7 @@
             </p>
         </div>
         <p class="text-center">
-            L.E.A.D.S 2026 |
+            LEADS 2026 |
             Powered by <a href="https://www.leadsresearchgroup.com">Laboratory for Emerging Aircraft Design and Systems</a>
         </p>
         <p class="text-center">
