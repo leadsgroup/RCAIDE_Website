@@ -180,7 +180,11 @@
     <div class="container">
         <h1>RCAIDE<h1>
         <p>Design. Analyze. Optimize.</p>
-        <p><a class="btn btn-primary btn-lg" href="https://www.docs.rcaide.leadsresearchgroup.com/install.html" role="button">Download</a></p>
+        <p>
+            <a class="btn btn-primary btn-lg" href="https://www.docs.rcaide.leadsresearchgroup.com/install.html" role="button">Download</a>
+            &nbsp;
+            <a class="btn btn-lg" href="https://pypi.org/project/RCAIDE-GUI/" role="button" style="border: 2px solid #7dd3fc; color: #7dd3fc; background: transparent;">Download GUI</a>
+        </p>
     </div>
 </div>
 
@@ -191,53 +195,81 @@
     </div>
 </section>
 
-<div class="row">
+<div class="row" style="background: #0a0f1a; padding: 70px 0; margin: 0;">
     <div class="container">
-        <div class="row align-items-center mb-5">
-            <div class="col-md-6">
-                <h2 class="header-light regular-pad">What is RCAIDE?</h2>
-                <p class="lead" style="font-size: 19px;">
-                    RCAIDE is a powerful open-source Python platform that revolutionizes aircraft design and analysis. 
-                    From commercial airliners to UAVs and next-generation hybrid-electric aircraft, RCAIDE provides 
-                    comprehensive multi-disciplinary analysis tools backed by validated engineering methods. RCAIDE's 
-                    streamlined workflow and modular architecture help aerospace engineers and researchers accelerate 
-                    development cycles and explore innovative designs with confidence.
-                </p>                    
+        <div class="row align-items-center" style="margin-bottom: 56px;">
+            <div class="col-md-7" style="color: white;">
+                <h2 style="font-size: 2.2em; margin-bottom: 16px;">What is RCAIDE?</h2>
+                <p style="color: #94a3b8; font-size: 18px; line-height: 1.8; margin-bottom: 28px;">
+                    RCAIDE is a powerful open-source Python platform for aircraft design and analysis.
+                    From commercial airliners to UAVs and next-generation hybrid-electric aircraft, RCAIDE provides
+                    comprehensive multi-disciplinary tools backed by validated engineering methods.
+                </p>
+                <div style="background: #161b27; border: 1px solid rgba(125,211,252,0.25); border-radius: 8px; padding: 14px 20px; font-family: monospace; font-size: 15px; color: #7dd3fc; display: flex; align-items: center; justify-content: space-between; max-width: 360px;">
+                    <span>pip install rcaide-leads</span>
+                    <button onclick="navigator.clipboard.writeText('pip install rcaide-leads')" title="Copy" style="background: none; border: none; color: #7dd3fc; cursor: pointer; font-size: 13px; padding: 0 0 0 12px; opacity: 0.7;">&#10697;</button>
+                </div>
             </div>
-            <div class="col-md-6">
-                <img src="/assets/img/RCAIDE_Logo_No_Background.png" 
-                     alt="RCAIDE logo" 
-                     class="img-responsive logo-scaled"
-                     style="max-width: 300px; width: 90%; height: auto; margin-left: auto; margin-right: auto; display: block;">
+            <div class="col-md-5 text-center">
+                <img src="/assets/img/RCAIDE_Logo_No_Background.png" alt="RCAIDE logo"
+                     style="max-width: 260px; width: 85%; height: auto;">
+            </div>
+        </div>
+        <div class="row" style="gap: 0;">
+            <div class="col-md-3 col-sm-6" style="padding: 12px;">
+                <div style="background: #161b27; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 28px 22px; height: 100%;">
+                    <div style="color: #7dd3fc; font-size: 28px; margin-bottom: 12px;"><i class="fa fa-bar-chart"></i></div>
+                    <h4 style="color: white; margin-bottom: 10px;">Multi-disciplinary Analysis</h4>
+                    <p style="color: #64748b; font-size: 14px; line-height: 1.6; margin: 0;">Aerodynamics, propulsion, weights, and performance — fully integrated in one framework.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6" style="padding: 12px;">
+                <div style="background: #161b27; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 28px 22px; height: 100%;">
+                    <div style="color: #7dd3fc; font-size: 28px; margin-bottom: 12px;"><i class="fa fa-cube"></i></div>
+                    <h4 style="color: white; margin-bottom: 10px;">OpenVSP &amp; AVL Integration</h4>
+                    <p style="color: #64748b; font-size: 14px; line-height: 1.6; margin: 0;">Automatic geometry generation and aerodynamic analysis with industry-standard external tools.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6" style="padding: 12px;">
+                <div style="background: #161b27; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 28px 22px; height: 100%;">
+                    <div style="color: #7dd3fc; font-size: 28px; margin-bottom: 12px;"><i class="fa fa-bolt"></i></div>
+                    <h4 style="color: white; margin-bottom: 10px;">Electric &amp; Hybrid Propulsion</h4>
+                    <p style="color: #64748b; font-size: 14px; line-height: 1.6; margin: 0;">Advanced modeling for all-electric, hybrid-electric, cryogenic hydrogen, and SAF aircraft.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6" style="padding: 12px;">
+                <div style="background: #161b27; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 28px 22px; height: 100%;">
+                    <div style="color: #7dd3fc; font-size: 28px; margin-bottom: 12px;"><i class="fa fa-globe"></i></div>
+                    <h4 style="color: white; margin-bottom: 10px;">Mission Simulation</h4>
+                    <p style="color: #64748b; font-size: 14px; line-height: 1.6; margin: 0;">Full trajectory simulation with fuel burn, emissions, noise, and operating cost analysis.</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="section-divider"></div>
-
-<div class="container my-5">
-    <div class="row bg-white py-5">
-        <div class="col-md-7">
-            <h2 class="mb-4">Adopted Worldwide</h2>
-
-            <p class="lead" style="font-size: 19px;">
-                RCAIDE has been adopted by aerospace engineers and researchers across industry, government, and academia worldwide. Building on the legacy of SUAVE — one of the most widely used open-source aircraft design tools — RCAIDE delivers modern architecture, expanded capabilities, and long-term maintainability.
-            </p>
-
-            <h3>Trusted by Leading Organizations</h3>
-            <ul class="list-unstyled" style="font-size: 19px;">
-                <li><strong>Industry & Government:</strong> NASA, Boeing, AFRL, Embraer, Joby, Vahana, Argonne National Labs, Bombardier, Raytheon, BAE, Google</li>
-                <li><strong>Academia:</strong> MIT, Purdue, Embry-Riddle, Carnegie Mellon, Princeton, Virginia Tech, Georgia Tech, Michigan, Stanford, Cranfield, University of Sydney, TU Delft, IIT, University of Toronto, Concordia, ISAE</li>
-            </ul>
-        </div>
-        <div class="col-md-5 d-flex align-items-center">
-            <div class="text-center w-100">
+<div class="row" style="background: #0d1117; padding: 70px 0; margin: 0;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-7" style="color: white;">
+                <h2 style="font-size: 2.2em; margin-bottom: 16px;">Adopted Worldwide</h2>
+                <p style="color: #94a3b8; font-size: 18px; line-height: 1.8; margin-bottom: 24px;">
+                    RCAIDE has been adopted by aerospace engineers and researchers across industry, government, and academia worldwide. Building on the legacy of SUAVE — one of the most widely used open-source aircraft design tools — RCAIDE delivers modern architecture, expanded capabilities, and long-term maintainability.
+                </p>
+                <h4 style="color: white; margin-bottom: 12px;">Trusted by Leading Organizations</h4>
+                <p style="color: #64748b; font-size: 16px; line-height: 1.8; margin-bottom: 8px;">
+                    <strong style="color: #94a3b8;">Industry &amp; Government:</strong> NASA, Boeing, AFRL, Embraer, Joby, Vahana, Argonne National Labs, Bombardier, Raytheon, BAE, Google
+                </p>
+                <p style="color: #64748b; font-size: 16px; line-height: 1.8;">
+                    <strong style="color: #94a3b8;">Academia:</strong> MIT, Purdue, Embry-Riddle, Carnegie Mellon, Princeton, Virginia Tech, Georgia Tech, Michigan, Stanford, Cranfield, University of Sydney, TU Delft, IIT, University of Toronto, Concordia, ISAE
+                </p>
+            </div>
+            <div class="col-md-5 text-center">
                 <img src="/assets/img/RCAIDE_Worldwide_Downloads.png"
                      alt="RCAIDE Worldwide Downloads"
                      class="img-fluid rounded"
-                     style="max-width: 100%; height: auto;">
-                <p class="mt-2" style="color: white;">RCAIDE Worldwide Downloads</p>
+                     style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 24px rgba(0,0,0,0.5);">
+                <p style="color: #64748b; margin-top: 12px; font-size: 14px;">RCAIDE Worldwide Downloads</p>
             </div>
         </div>
     </div>
@@ -250,19 +282,43 @@
             Explore aerospace vehicles modeled and analyzed with RCAIDE
         </p>
 
-        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 28px;">
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; max-width: 960px; margin-left: auto; margin-right: auto;">
             <button class="hangar-tab active" onclick="selectAircraft(0)">Boeing 787</button>
             <button class="hangar-tab" onclick="selectAircraft(1)">BWB&#8209;LH&#8322;</button>
             <button class="hangar-tab" onclick="selectAircraft(2)">Concorde</button>
             <button class="hangar-tab" onclick="selectAircraft(3)">Tiltrotor eVTOL</button>
             <button class="hangar-tab" onclick="selectAircraft(4)">ATR&#8209;72 Cryo</button>
             <button class="hangar-tab" onclick="selectAircraft(5)">F&#8209;22 Raptor</button>
+            <button class="hangar-tab" onclick="selectAircraft(6)">ATR&#8209;72</button>
+            <button class="hangar-tab" onclick="selectAircraft(7)">ATR&#8209;72 Electric</button>
+            <button class="hangar-tab" onclick="selectAircraft(8)">Airbus A220</button>
+            <button class="hangar-tab" onclick="selectAircraft(9)">Airbus A320</button>
+            <button class="hangar-tab" onclick="selectAircraft(10)">Airbus Vahana</button>
+            <button class="hangar-tab" onclick="selectAircraft(11)">BWB</button>
+            <button class="hangar-tab" onclick="selectAircraft(12)">Boeing 737&#8209;800</button>
+            <button class="hangar-tab" onclick="selectAircraft(13)">Boeing 747&#8209;100</button>
+            <button class="hangar-tab" onclick="selectAircraft(14)">Boeing 777</button>
+            <button class="hangar-tab" onclick="selectAircraft(15)">CRJ&#8209;700</button>
+            <button class="hangar-tab" onclick="selectAircraft(16)">Cessna 172</button>
+            <button class="hangar-tab" onclick="selectAircraft(17)">Twin Otter</button>
+            <button class="hangar-tab" onclick="selectAircraft(18)">Electric Twin Otter</button>
+            <button class="hangar-tab" onclick="selectAircraft(19)">DHC&#8209;8</button>
+            <button class="hangar-tab" onclick="selectAircraft(20)">Elysian E9X</button>
+            <button class="hangar-tab" onclick="selectAircraft(21)">Embraer E190</button>
+            <button class="hangar-tab" onclick="selectAircraft(22)">Lockheed C&#8209;5A</button>
+            <button class="hangar-tab" onclick="selectAircraft(23)">F&#8209;35C</button>
+            <button class="hangar-tab" onclick="selectAircraft(24)">NASA X&#8209;57</button>
+            <button class="hangar-tab" onclick="selectAircraft(25)">Ryan Navion</button>
+            <button class="hangar-tab" onclick="selectAircraft(26)">Stopped Rotor eVTOL</button>
+            <button class="hangar-tab" onclick="selectAircraft(27)">Tecnam P2012</button>
+            <button class="hangar-tab" onclick="selectAircraft(28)">Tilt Stopped Rotor</button>
+            <button class="hangar-tab" onclick="selectAircraft(29)">Tiltwing eVTOL</button>
         </div>
 
         <div style="max-width: 960px; margin: 0 auto; border-radius: 16px; overflow: hidden; background: #161b27; border: 1px solid rgba(255,255,255,0.07); box-shadow: 0 8px 40px rgba(0,0,0,0.5);">
             <model-viewer
                 id="hangar-viewer"
-                src="https://raw.githubusercontent.com/leadsgroup/RCAIDE_LEADS/main/Digital_Hangar/Boeing_787/Boeing_787_8.gltf"
+                src="https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Boeing_787/Boeing_787_8.gltf"
                 camera-controls
                 auto-rotate
                 auto-rotate-delay="1000"
@@ -278,6 +334,7 @@
         <div style="text-align: center; margin-top: 22px;">
             <h4 id="hangar-name" style="color: #7dd3fc; margin: 0; font-size: 1.2em; letter-spacing: 0.01em;">Boeing 787-8 Dreamliner</h4>
             <p id="hangar-desc" style="color: #64748b; margin: 6px 0 0 0; font-size: 15px;">Long-haul commercial transport &middot; Twin turbofan</p>
+            <a href="https://github.com/leadsgroup/RCAIDE_LEADS/tree/main/Digital_Hangar" target="_blank" style="display: inline-block; margin-top: 16px; color: #7dd3fc; font-size: 14px; text-decoration: none; border: 1px solid rgba(125,211,252,0.4); padding: 6px 18px; border-radius: 999px; transition: background 0.2s;">Explore all models on GitHub &rarr;</a>
         </div>
     </div>
 </div>
@@ -287,10 +344,10 @@
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.10);
     color: #94a3b8;
-    padding: 8px 22px;
+    padding: 6px 16px;
     border-radius: 999px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
     font-family: inherit;
     transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
@@ -308,36 +365,36 @@
 
 <script>
 var _aircraft = [
-    {
-        name: "Boeing 787-8 Dreamliner",
-        desc: "Long-haul commercial transport · Twin turbofan",
-        src: "https://raw.githubusercontent.com/leadsgroup/RCAIDE_LEADS/main/Digital_Hangar/Boeing_787/Boeing_787_8.gltf"
-    },
-    {
-        name: "Blended Wing Body — Liquid Hydrogen",
-        desc: "Next-generation ultra-efficient transport · Cryogenic LH₂ propulsion",
-        src: "https://raw.githubusercontent.com/leadsgroup/RCAIDE_LEADS/main/Digital_Hangar/Blended_Wing_Body_Hydrogen/BWB_LH2.gltf"
-    },
-    {
-        name: "Concorde",
-        desc: "Supersonic commercial transport · Turbojet, Mach 2.04",
-        src: "https://raw.githubusercontent.com/leadsgroup/RCAIDE_LEADS/main/Digital_Hangar/Concorde/Concorde.gltf"
-    },
-    {
-        name: "Tiltrotor eVTOL",
-        desc: "Urban air mobility · Fully electric, distributed propulsion",
-        src: "https://raw.githubusercontent.com/leadsgroup/RCAIDE_LEADS/main/Digital_Hangar/Tiltrotor_EVTOL/Tiltrotor.gltf"
-    },
-    {
-        name: "ATR-72 Cryo Parallel Hybrid",
-        desc: "Regional turboprop · Cryogenic hydrogen parallel hybrid electric",
-        src: "https://raw.githubusercontent.com/leadsgroup/RCAIDE_LEADS/main/Digital_Hangar/ATR_72_Parallel_Hybrid/ATR_72_parallel_hybrid_electric.gltf"
-    },
-    {
-        name: "Lockheed F-22 Raptor",
-        desc: "5th-generation air superiority fighter · Twin F119 turbofan, supercruise capable",
-        src: "https://raw.githubusercontent.com/leadsgroup/RCAIDE_LEADS/main/Digital_Hangar/Lockheed_F22/Lockheed_F22.gltf"
-    }
+    { name: "Boeing 787-8 Dreamliner",        desc: "Long-haul commercial transport &middot; Twin turbofan",                                    src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Boeing_787/Boeing_787_8.gltf" },
+    { name: "Blended Wing Body — Liquid Hydrogen", desc: "Next-generation ultra-efficient transport &middot; Cryogenic LH&#8322; propulsion",   src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Blended_Wing_Body_Hydrogen/BWB_LH2.gltf" },
+    { name: "Concorde",                        desc: "Supersonic commercial transport &middot; Turbojet, Mach 2.04",                             src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Concorde/Concorde.gltf" },
+    { name: "Tiltrotor eVTOL",                 desc: "Urban air mobility &middot; Fully electric, distributed propulsion",                       src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Tiltrotor_EVTOL/Tiltrotor.gltf" },
+    { name: "ATR-72 Cryo Parallel Hybrid",     desc: "Regional turboprop &middot; Cryogenic hydrogen parallel hybrid electric",                  src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/ATR_72_Parallel_Hybrid/ATR_72_parallel_hybrid_electric.gltf" },
+    { name: "Lockheed F-22 Raptor",            desc: "5th-generation air superiority fighter &middot; Twin F119 turbofan, supercruise capable",  src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Lockheed_F22/Lockheed_F22.gltf" },
+    { name: "ATR-72",                          desc: "Regional turboprop &middot; Twin PW127 turboprop",                                         src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/ATR_72/ATR_72.gltf" },
+    { name: "ATR-72 All Electric",             desc: "Regional turboprop &middot; Fully electric propulsion",                                    src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/ATR_72_All_Electric/ATR_72_all_electric.gltf" },
+    { name: "Airbus A220-100",                 desc: "Narrow-body regional jet &middot; Twin PW1500G turbofan",                                  src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Airbus_A220/Airbus_A220_100.gltf" },
+    { name: "Airbus A320",                     desc: "Short-to-medium range narrow-body &middot; Twin CFM56 turbofan",                           src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Airbus_A320/Airbus_A320.gltf" },
+    { name: "Airbus Vahana",                   desc: "Single-seat eVTOL demonstrator &middot; Octorotor tilt-wing",                              src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Airbus_Vahana/Vahana.gltf" },
+    { name: "Blended Wing Body",               desc: "Unconventional wide-body transport &middot; High lift-to-drag ratio",                      src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Blended_Wing_Body/BWB.gltf" },
+    { name: "Boeing 737-800",                  desc: "Short-to-medium range narrow-body &middot; Twin CFM56 turbofan",                           src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Boeing_737_800/Boeing_737_800.gltf" },
+    { name: "Boeing 747-100",                  desc: "Long-haul wide-body jumbo jet &middot; Four JT9D turbofan",                                src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Boeing_747_100/Boeing_747_100.gltf" },
+    { name: "Boeing 777-200ER",                desc: "Long-haul wide-body &middot; Twin GE90 turbofan",                                          src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Boeing_777/Boeing_777_200er.gltf" },
+    { name: "Bombardier CRJ-700",              desc: "Regional jet &middot; Twin CF34 turbofan",                                                 src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Canadair_Regional_Jet_CRJ_700/CRJ_700.gltf" },
+    { name: "Cessna 172 Skyhawk",              desc: "General aviation trainer &middot; Single piston engine",                                   src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Cessna_172/Cessna_172.gltf" },
+    { name: "DHC-6 Twin Otter",                desc: "Short-haul STOL utility &middot; Twin PT6A turboprop",                                     src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/De_Havilland_Canada_DHC_6/Twin_Otter.gltf" },
+    { name: "DHC-6 Electric Twin Otter",       desc: "Short-haul STOL utility &middot; All-electric propulsion",                                 src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/De_Havilland_Canada_DHC_6_Electric/Twin_Otter_all_electric.gltf" },
+    { name: "DHC-8-100 Dash 8",               desc: "Regional turboprop &middot; Twin PW120 turboprop",                                         src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/De_Havilland_Canada_DHC_8/DHC8_100.gltf" },
+    { name: "Elysian E9X",                     desc: "Short-range all-electric regional aircraft &middot; Distributed electric propulsion",       src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Elysian_E9X/Elysian_E9X.gltf" },
+    { name: "Embraer E190-AR",                 desc: "Narrow-body regional jet &middot; Twin CF34 turbofan",                                     src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Embraer_E190/Embraer_E190AR.gltf" },
+    { name: "Lockheed C-5A Galaxy",            desc: "Strategic military airlifter &middot; Four TF39 turbofan",                                 src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Lockheed_C5a/Lockheed_C5a.gltf" },
+    { name: "Lockheed F-35C",                  desc: "Carrier-based multirole fighter &middot; Single F135 turbofan",                            src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Lockheed_F35C/Lockheed_F35C.gltf" },
+    { name: "NASA X-57 Maxwell Mod II",        desc: "Electric experimental aircraft &middot; Distributed electric propulsion",                   src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/NASA_X_57_Modification_2/X57_Maxwell_M2.gltf" },
+    { name: "Ryan Navion",                     desc: "Post-war general aviation classic &middot; Single piston engine",                           src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Ryan_Navion/Navion.gltf" },
+    { name: "Stopped Rotor eVTOL",             desc: "High-speed eVTOL concept &middot; Stopped rotor compound configuration",                   src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Stopped_Rotor_EVTOL/Stopped_Rotor.gltf" },
+    { name: "Tecnam P2012 Traveller",          desc: "Twin-engine commuter &middot; Twin Lycoming TEO-540 piston",                               src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Tecnam_P2012/Tecnam_P2012.gltf" },
+    { name: "Tilt Stopped Rotor V-Tail eVTOL", desc: "Advanced eVTOL concept &middot; Tilt stopped rotor with V-tail",                          src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Tilt_Stopped_Rotor_V_tail_EVTOL/Tilt_Stopped_Rotor_V_Tail.gltf" },
+    { name: "Tiltwing eVTOL",                  desc: "Urban air mobility &middot; Electric tiltwing configuration",                               src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Tiltwing_EVTOL/Tiltwing.gltf" }
 ];
 
 function selectAircraft(index) {
@@ -351,23 +408,50 @@ function selectAircraft(index) {
 }
 </script>
 
-<div class="row" style="background-color: white; padding: 40px 0; margin: 0; color: black;">
+<div class="row" style="background: #0d1117; padding: 60px 0; margin: 0;">
+    <div class="container">
+        <div class="row" style="align-items: center;">
+            <div class="col-md-6" style="color: white;">
+                <h2 style="font-size: 2em; margin-bottom: 16px;">RCAIDE GUI</h2>
+                <p style="color: #94a3b8; font-size: 17px; line-height: 1.7; margin-bottom: 24px;">
+                    A visual aircraft design, analysis, and mission simulation workspace built on top of RCAIDE.
+                    Configure vehicles, set up missions, run analyses, and explore results — all without writing a single line of code.
+                </p>
+                <ul style="color: #94a3b8; font-size: 16px; line-height: 2; padding-left: 20px; margin-bottom: 28px;">
+                    <li>Interactive vehicle geometry builder</li>
+                    <li>Drag-and-drop mission setup</li>
+                    <li>Real-time performance and emissions results</li>
+                    <li>Built-in results viewer and plotting</li>
+                </ul>
+                <div style="background: #161b27; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px 18px; font-family: monospace; font-size: 15px; color: #7dd3fc; margin-bottom: 24px;">
+                    pip install RCAIDE-GUI
+                </div>
+                <a class="btn btn-primary btn-lg" href="https://pypi.org/project/RCAIDE-GUI/" role="button" target="_blank">Download GUI</a>
+                &nbsp;
+                <a class="btn btn-default btn-lg" href="https://www.rcaide.leadsresearchgroup.com/gui/" role="button">GUI Website</a>
+            </div>
+            <div class="col-md-6">
+                <img src="/assets/img/gui-home.png" alt="RCAIDE GUI" class="img-fluid" style="border-radius: 12px; box-shadow: 0 8px 40px rgba(0,0,0,0.6);">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="background: #0a0f1a; padding: 70px 0; margin: 0;">
     <div class="container">
         <div class="col-md-12">
-            <h2 class="header-light regular-pad">External Interfaces</h2>
-            <p class="lead" style="font-size: 19px;">
-                RCAIDE currently supports two external packages, OpenVSP and AVL. Regarding the former, users can automatically 
-                generate OpenVSP geometry from RCAIDE and even read in geometry to perform mission simulations. RCAIDE's AVL 
-                interface enables the automatic generation of AVL files in addition to running AVL directly through the built-in 
-                python API. This allows the designers to focus on design and analysis. Currently, the development team is working 
-                on an API for SU2, a high-fidelity CFD solver. This capability was a feature of SUAVE, and we want to bring it 
-                back for new RCAIDE users.
+            <h2 style="color: white; margin-bottom: 16px;">External Interfaces</h2>
+            <p style="color: #94a3b8; font-size: 18px; line-height: 1.8; margin-bottom: 32px;">
+                RCAIDE currently supports two external packages, OpenVSP and AVL. Users can automatically
+                generate OpenVSP geometry from RCAIDE and read in geometry to perform mission simulations. RCAIDE's AVL
+                interface enables automatic generation of AVL files and running AVL directly through a built-in Python API.
+                The development team is actively working on an SU2 high-fidelity CFD interface.
             </p>
             <div class="text-center">
-                <img src="assets/img/Extenal_Interfaces.png" 
-                     alt="External Interfaces" 
+                <img src="assets/img/Extenal_Interfaces.png"
+                     alt="External Interfaces"
                      class="img-fluid rounded"
-                     style="max-width: 800px; width: 100%;">
+                     style="max-width: 800px; width: 100%; border-radius: 10px; box-shadow: 0 4px 24px rgba(0,0,0,0.5);">
             </div>
         </div>
     </div>
@@ -406,26 +490,30 @@ function selectAircraft(index) {
     </div>
 </div>
 
-<div class="row">
+<div class="row" style="background: #0d1117; padding: 70px 0; margin: 0;">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 feature-box">
-                <h1><i class="fa fa-cogs" aria-hidden="true"></i></h1>
-                <h3>Verification & Validation</h3>
-                <p style="font-size: 18px;">
-                    RCAIDE's methods are validated against experimental data and high-fidelity simulations.
-                    Aerodynamic predictions achieve R² = 0.96 (C<sub>L</sub>) and R² = 0.94 (C<sub>D</sub>)
-                    against NASA wind-tunnel data for the Common Research Model.
-                </p>
-                <a href="https://doi.org/10.1016/j.ast.2026.112328" class="btn btn-primary" target="_blank">Read the Paper</a>
+            <div class="col-sm-6" style="padding: 16px;">
+                <div style="background: #161b27; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 36px 28px; height: 100%;">
+                    <div style="color: #7dd3fc; font-size: 32px; margin-bottom: 16px;"><i class="fa fa-cogs" aria-hidden="true"></i></div>
+                    <h3 style="color: white; margin-bottom: 12px;">Verification &amp; Validation</h3>
+                    <p style="color: #64748b; font-size: 16px; line-height: 1.8; margin-bottom: 24px;">
+                        RCAIDE's methods are validated against experimental data and high-fidelity simulations.
+                        Aerodynamic predictions achieve R² = 0.96 (C<sub>L</sub>) and R² = 0.94 (C<sub>D</sub>)
+                        against NASA wind-tunnel data for the Common Research Model.
+                    </p>
+                    <a href="https://doi.org/10.1016/j.ast.2026.112328" class="btn btn-primary" target="_blank">Read the Paper</a>
+                </div>
             </div>
-            <div class="col-sm-6 feature-box">
-                <h1><i class="fa fa-code-fork" aria-hidden="true"></i></h1>
-                <h3>Release Notes</h3>
-                <p style="font-size: 18px;">
-                    View the full version history, changelog, and all published releases of RCAIDE on PyPI.
-                </p>
-                <a href="https://pypi.org/project/RCAIDE-LEADS/#history" class="btn btn-primary" target="_blank">View on PyPI</a>
+            <div class="col-sm-6" style="padding: 16px;">
+                <div style="background: #161b27; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 36px 28px; height: 100%;">
+                    <div style="color: #7dd3fc; font-size: 32px; margin-bottom: 16px;"><i class="fa fa-code-fork" aria-hidden="true"></i></div>
+                    <h3 style="color: white; margin-bottom: 12px;">Release Notes</h3>
+                    <p style="color: #64748b; font-size: 16px; line-height: 1.8; margin-bottom: 24px;">
+                        View the full version history, changelog, and all published releases of RCAIDE on PyPI.
+                    </p>
+                    <a href="https://pypi.org/project/RCAIDE-LEADS/#history" class="btn btn-primary" target="_blank">View on PyPI</a>
+                </div>
             </div>
         </div>
     </div>
