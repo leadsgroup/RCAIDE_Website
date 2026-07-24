@@ -494,7 +494,7 @@ permalink: /gui/
                 <h1>A desktop command center for aircraft design studies.</h1>
                 <p>RCAIDE GUI turns the RCAIDE research workflow into a guided visual workspace for defining aircraft, validating geometry, configuring analyses, and running mission simulations.</p>
                 <div class="gui-actions">
-                    <a href="https://pypi.org/project/RCAIDE-GUI/" class="btn btn-lg gui-primary">
+                    <a href="#quick-start" class="btn btn-lg gui-primary">
                         <i class="fa fa-download"></i> Download GUI
                     </a>
                     <a href="https://www.docs.rcaide.leadsresearchgroup.com" class="btn btn-lg btn-default">
@@ -525,6 +525,30 @@ permalink: /gui/
             </div>
             <div class="gui-hero-shot">
                 <img src="/assets/img/gui-home.png" alt="RCAIDE GUI home screen">
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start: installation and launch commands. -->
+    <section id="quick-start" class="gui-section">
+        <div class="gui-section-header">
+          <div>
+            <span class="gui-section-label">Install</span>
+            <h2>Quick Start</h2>
+          </div>
+        </div>
+        <div class="gui-command-grid">
+            <div class="gui-command">
+                <span>Install from PyPI</span>
+                <code>pip install RCAIDE-GUI</code>
+            </div>
+            <div class="gui-command">
+                <span>Launch the desktop app</span>
+                <code>rcaide-gui</code>
+            </div>
+            <div class="gui-command">
+                <span>Run from source</span>
+                <code>python main.py</code>
             </div>
         </div>
     </section>
@@ -706,27 +730,4 @@ permalink: /gui/
         </div>
     </section>
 
-    <!-- Quick Start: installation and launch commands. -->
-    <section class="gui-section">
-        <div class="gui-section-header">
-          <div>
-            <span class="gui-section-label">Install</span>
-            <h2>Quick Start</h2>
-          </div>
-        </div>
-        <div class="gui-command-grid">
-            <div class="gui-command">
-                <span>Install from PyPI</span>
-                <code>pip install RCAIDE-GUI</code>
-            </div>
-            <div class="gui-command">
-                <span>Launch the desktop app</span>
-                <code>rcaide-gui</code>
-            </div>
-            <div class="gui-command">
-                <span>Run from source</span>
-                <code>python main.py</code>
-            </div>
-        </div>
-    </section>
 </div>
