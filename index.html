@@ -277,8 +277,11 @@
 <div class="row" style="background: #0d1117; padding: 60px 0; margin: 0;">
     <div class="container">
         <h2 style="color: white; text-align: center; margin-bottom: 8px; font-size: 2em;">Digital Hangar</h2>
-        <p style="color: #94a3b8; text-align: center; font-size: 18px; margin-bottom: 36px;">
+        <p style="color: #94a3b8; text-align: center; font-size: 18px; margin-bottom: 8px;">
             Explore aerospace vehicles modeled and analyzed with RCAIDE
+        </p>
+        <p style="color: #64748b; text-align: center; font-size: 14px; margin-bottom: 36px;">
+            All models can be exported to <a href="https://openvsp.org/" style="color: #7dd3fc;">OpenVSP</a>
         </p>
 
         <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; max-width: 960px; margin-left: auto; margin-right: auto;">
@@ -290,28 +293,25 @@
             <button class="hangar-tab" onclick="selectAircraft(5)">ATR&#8209;72</button>
             <button class="hangar-tab" onclick="selectAircraft(6)">ATR&#8209;72 Electric</button>
             <button class="hangar-tab" onclick="selectAircraft(7)">Airbus A320</button>
-            <button class="hangar-tab" onclick="selectAircraft(8)">Airbus A220</button>
-            <button class="hangar-tab" onclick="selectAircraft(9)">Airbus Vahana</button>
-            <button class="hangar-tab" onclick="selectAircraft(10)">BWB</button>
-            <button class="hangar-tab" onclick="selectAircraft(11)">BWB&#8209;H2</button>
-            <button class="hangar-tab" onclick="selectAircraft(12)">Boeing 737&#8209;800</button>
-            <button class="hangar-tab" onclick="selectAircraft(13)">Boeing 747&#8209;100</button>
-            <button class="hangar-tab" onclick="selectAircraft(14)">Boeing 777</button>
-            <button class="hangar-tab" onclick="selectAircraft(15)">CRJ&#8209;700</button>
-            <button class="hangar-tab" onclick="selectAircraft(16)">Cessna 172</button>
-            <button class="hangar-tab" onclick="selectAircraft(17)">Twin Otter</button>
-            <button class="hangar-tab" onclick="selectAircraft(18)">Electric Twin Otter</button>
-            <button class="hangar-tab" onclick="selectAircraft(19)">DHC&#8209;8</button>
-            <button class="hangar-tab" onclick="selectAircraft(20)">Embraer E190</button>
-            <button class="hangar-tab" onclick="selectAircraft(21)">Lockheed C&#8209;5A</button>
-            <button class="hangar-tab" onclick="selectAircraft(22)">F&#8209;35C</button>
-            <button class="hangar-tab" onclick="selectAircraft(23)">NASA X&#8209;57</button>
-            <button class="hangar-tab" onclick="selectAircraft(24)">Ryan Navion</button>
-            <button class="hangar-tab" onclick="selectAircraft(25)">Stopped Rotor eVTOL</button>
-            <button class="hangar-tab" onclick="selectAircraft(26)">Tecnam P2012</button>
-            <button class="hangar-tab" onclick="selectAircraft(27)">Tilt Stopped Rotor</button>
-            <button class="hangar-tab" onclick="selectAircraft(28)">Tiltwing eVTOL</button>
-            <button class="hangar-tab" onclick="selectAircraft(29)">Elysian E9X</button>
+            <button class="hangar-tab" onclick="selectAircraft(8)">Airbus Vahana</button>
+            <button class="hangar-tab" onclick="selectAircraft(9)">BWB</button>
+            <button class="hangar-tab" onclick="selectAircraft(10)">Boeing 737&#8209;800</button>
+            <button class="hangar-tab" onclick="selectAircraft(11)">Boeing 747&#8209;100</button>
+            <button class="hangar-tab" onclick="selectAircraft(12)">Boeing 777</button>
+            <button class="hangar-tab" onclick="selectAircraft(13)">CRJ&#8209;700</button>
+            <button class="hangar-tab" onclick="selectAircraft(14)">Cessna 172</button>
+            <button class="hangar-tab" onclick="selectAircraft(15)">Twin Otter</button>
+            <button class="hangar-tab" onclick="selectAircraft(16)">Electric Twin Otter</button>
+            <button class="hangar-tab" onclick="selectAircraft(17)">DHC&#8209;8</button>
+            <button class="hangar-tab" onclick="selectAircraft(18)">Lockheed C&#8209;5A</button>
+            <button class="hangar-tab" onclick="selectAircraft(19)">F&#8209;35C</button>
+            <button class="hangar-tab" onclick="selectAircraft(20)">NASA X&#8209;57</button>
+            <button class="hangar-tab" onclick="selectAircraft(21)">Ryan Navion</button>
+            <button class="hangar-tab" onclick="selectAircraft(22)">Stopped Rotor eVTOL</button>
+            <button class="hangar-tab" onclick="selectAircraft(23)">Tecnam P2012</button>
+            <button class="hangar-tab" onclick="selectAircraft(24)">Tilt Stopped Rotor</button>
+            <button class="hangar-tab" onclick="selectAircraft(25)">Tiltwing eVTOL</button>
+            <button class="hangar-tab" onclick="selectAircraft(26)">Elysian E9X</button>
         </div>
 
         <div style="max-width: 960px; margin: 0 auto; border-radius: 16px; overflow: hidden; background: #2a3347; border: 1px solid rgba(255,255,255,0.07); box-shadow: 0 8px 40px rgba(0,0,0,0.5);">
@@ -374,10 +374,8 @@ var _aircraft = [
     { name: "ATR-72",                           desc: "Regional turboprop &middot; Twin PW127 turboprop",                                        orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/ATR_72/ATR_72.gltf" },
     { name: "ATR-72 All Electric",              desc: "Regional turboprop &middot; Fully electric propulsion",                                   orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/ATR_72_All_Electric/ATR_72_all_electric.gltf" },
     { name: "Airbus A320",                      desc: "Short-to-medium range narrow-body &middot; Twin CFM56 turbofan",                          orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Airbus_A320/Airbus_A320.gltf" },
-    { name: "Airbus A220-100",                  desc: "Short-to-medium range narrow-body &middot; Twin PW1500G turbofan",                         orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Airbus_A220/Airbus_A220_100.gltf" },
     { name: "Airbus Vahana",                    desc: "Single-seat eVTOL demonstrator &middot; Octorotor tilt-wing",                             orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Airbus_Vahana/Vahana.gltf" },
     { name: "Blended Wing Body",                desc: "Unconventional wide-body transport &middot; High lift-to-drag ratio",                     orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Blended_Wing_Body/BWB.gltf" },
-    { name: "BWB Liquid Hydrogen",              desc: "Hydrogen-powered blended wing body &middot; Cryogenic LH2 fuel cell propulsion",          orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Blended_Wing_Body_Hydrogen/BWB_LH2.gltf" },
     { name: "Boeing 737-800",                   desc: "Short-to-medium range narrow-body &middot; Twin CFM56 turbofan",                          orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Boeing_737_800/Boeing_737_800.gltf" },
     { name: "Boeing 747-100",                   desc: "Long-haul wide-body jumbo jet &middot; Four JT9D turbofan",                               orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Boeing_747_100/Boeing_747_100.gltf" },
     { name: "Boeing 777-200ER",                 desc: "Long-haul wide-body &middot; Twin GE90 turbofan",                                         orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Boeing_777/Boeing_777_200er.gltf" },
@@ -386,7 +384,6 @@ var _aircraft = [
     { name: "DHC-6 Twin Otter",                 desc: "Short-haul STOL utility &middot; Twin PT6A turboprop",                                    orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/De_Havilland_Canada_DHC_6/Twin_Otter.gltf" },
     { name: "DHC-6 Electric Twin Otter",        desc: "Short-haul STOL utility &middot; All-electric propulsion",                               orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/De_Havilland_Canada_DHC_6_Electric/Electric_Twin_Otter.gltf" },
     { name: "DHC-8-100 Dash 8",                desc: "Regional turboprop &middot; Twin PW120 turboprop",                                        orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/De_Havilland_Canada_DHC_8/DHC8_100.gltf" },
-    { name: "Embraer E190",                     desc: "Regional narrow-body jet &middot; Twin CF34-10E turbofan",                                 orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Embraer_E190/Embraer_190.gltf" },
     { name: "Lockheed C-5A Galaxy",             desc: "Strategic military airlifter &middot; Four TF39 turbofan",                                orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Lockheed_C5a/Lockheed_C5a.gltf" },
     { name: "Lockheed F-35C",                   desc: "Carrier-based multirole fighter &middot; Single F135 turbofan",                           orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Lockheed_F35C/Lockheed_F35C.gltf" },
     { name: "NASA X-57 Maxwell Mod II",         desc: "Electric experimental aircraft &middot; Distributed electric propulsion",                  orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/NASA_X_57_Modification_2/X57_Maxwell_M2.gltf" },
