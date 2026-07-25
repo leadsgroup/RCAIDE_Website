@@ -178,11 +178,11 @@
         <div class="wrapper">
             <div class="header-container jumbotron">
     <div class="container">
-        <h1>RCAIDE<h1>
+        <h1>RCAIDE</h1>
         <p>Design. Analyze. Optimize.</p>
         <div style="display: flex; gap: 12px; flex-wrap: nowrap; align-items: center; margin-top: 8px;">
-            <a class="btn btn-primary btn-lg" href="https://www.docs.rcaide.leadsresearchgroup.com/install.html" role="button" style="white-space: nowrap;">Download</a>
-            <a class="btn btn-primary btn-lg" href="https://pypi.org/project/RCAIDE-GUI/" role="button" style="white-space: nowrap;">Download GUI</a>
+            <a class="btn btn-primary btn-lg" href="/Install/" role="button" style="white-space: nowrap;">Download</a>
+            <a class="btn btn-primary btn-lg" href="/gui" role="button" style="white-space: nowrap;">RCAIDE GUI</a>
         </div>
     </div>
 </div>
@@ -323,7 +323,7 @@
                 rotation-per-second="20deg"
                 shadow-intensity="0.4"
                 exposure="1.1"
-                orientation="0deg -90deg 0deg"
+                orientation="0deg 0deg -90deg"
                 camera-orbit="0deg 75deg auto"
                 style="width: 100%; height: 520px; background: #2a3347;"
                 alt="Boeing 787-8 Dreamliner">
@@ -334,7 +334,7 @@
         <div style="text-align: center; margin-top: 22px;">
             <h4 id="hangar-name" style="color: #7dd3fc; margin: 0; font-size: 1.2em; letter-spacing: 0.01em;">Boeing 787-8 Dreamliner</h4>
             <p id="hangar-desc" style="color: #64748b; margin: 6px 0 0 0; font-size: 15px;">Long-haul commercial transport &middot; Twin turbofan</p>
-            <a href="https://github.com/leadsgroup/RCAIDE_LEADS/tree/main/Digital_Hangar" target="_blank" style="display: inline-block; margin-top: 16px; color: #7dd3fc; font-size: 14px; text-decoration: none; border: 1px solid rgba(125,211,252,0.4); padding: 6px 18px; border-radius: 999px; transition: background 0.2s;">Explore all models on GitHub &rarr;</a>
+            <a href="https://github.com/leadsgroup/RCAIDE_LEADS" target="_blank" style="display: inline-block; margin-top: 16px; color: #7dd3fc; font-size: 14px; text-decoration: none; border: 1px solid rgba(125,211,252,0.4); padding: 6px 18px; border-radius: 999px; transition: background 0.2s;">Explore all models on GitHub &rarr;</a>
         </div>
     </div>
 </div>
@@ -365,7 +365,7 @@
 
 <script>
 var _aircraft = [
-    { name: "Boeing 787-8 Dreamliner",         desc: "Long-haul commercial transport &middot; Twin turbofan",                                    orientation: "0deg -90deg 0deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Boeing_787/Boeing_787_8.gltf" },
+    { name: "Boeing 787-8 Dreamliner",         desc: "Long-haul commercial transport &middot; Twin turbofan",                                    orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Boeing_787/Boeing_787_8.gltf" },
     { name: "Concorde",                         desc: "Supersonic commercial transport &middot; Turbojet, Mach 2.04",                            orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Concorde/Concorde.gltf" },
     { name: "Tiltrotor eVTOL",                  desc: "Urban air mobility &middot; Fully electric, distributed propulsion",                      orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Tiltrotor_EVTOL/Tiltrotor.gltf" },
     { name: "ATR-72 Cryo Parallel Hybrid",      desc: "Regional turboprop &middot; Cryogenic hydrogen parallel hybrid electric",                 orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/ATR_72_Parallel_Hybrid/ATR_72_parallel_hybrid_electric.gltf" },
@@ -376,15 +376,15 @@ var _aircraft = [
     { name: "Airbus A320",                      desc: "Short-to-medium range narrow-body &middot; Twin CFM56 turbofan",                          orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Airbus_A320/Airbus_A320.gltf" },
     { name: "Airbus Vahana",                    desc: "Single-seat eVTOL demonstrator &middot; Octorotor tilt-wing",                             orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Airbus_Vahana/Vahana.gltf" },
     { name: "Blended Wing Body",                desc: "Unconventional wide-body transport &middot; High lift-to-drag ratio",                     orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Blended_Wing_Body/BWB.gltf" },
-    { name: "Boeing 737-800",                   desc: "Short-to-medium range narrow-body &middot; Twin CFM56 turbofan",                          orientation: "0deg -90deg 0deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Boeing_737_800/Boeing_737_800.gltf" },
+    { name: "Boeing 737-800",                   desc: "Short-to-medium range narrow-body &middot; Twin CFM56 turbofan",                          orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Boeing_737_800/Boeing_737_800.gltf" },
     { name: "Boeing 747-100",                   desc: "Long-haul wide-body jumbo jet &middot; Four JT9D turbofan",                               orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Boeing_747_100/Boeing_747_100.gltf" },
     { name: "Boeing 777-200ER",                 desc: "Long-haul wide-body &middot; Twin GE90 turbofan",                                         orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Boeing_777/Boeing_777_200er.gltf" },
     { name: "Bombardier CRJ-700",               desc: "Regional jet &middot; Twin CF34 turbofan",                                                orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Canadair_Regional_Jet_CRJ_700/CRJ_700.gltf" },
     { name: "Cessna 172 Skyhawk",               desc: "General aviation trainer &middot; Single piston engine",                                  orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Cessna_172/Cessna_172.gltf" },
     { name: "DHC-6 Twin Otter",                 desc: "Short-haul STOL utility &middot; Twin PT6A turboprop",                                    orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/De_Havilland_Canada_DHC_6/Twin_Otter.gltf" },
-    { name: "DHC-6 Electric Twin Otter",        desc: "Short-haul STOL utility &middot; All-electric propulsion",                               orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/De_Havilland_Canada_DHC_6_Electric/Twin_Otter_all_electric.gltf" },
+    { name: "DHC-6 Electric Twin Otter",        desc: "Short-haul STOL utility &middot; All-electric propulsion",                               orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/De_Havilland_Canada_DHC_6_Electric/Electric_Twin_Otter.gltf" },
     { name: "DHC-8-100 Dash 8",                desc: "Regional turboprop &middot; Twin PW120 turboprop",                                        orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/De_Havilland_Canada_DHC_8/DHC8_100.gltf" },
-    { name: "Embraer E190-AR",                  desc: "Narrow-body regional jet &middot; Twin CF34 turbofan",                                    orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Embraer_E190/Embraer_E190AR.gltf" },
+    { name: "Embraer E190-AR",                  desc: "Narrow-body regional jet &middot; Twin CF34 turbofan",                                    orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Embraer_E190/Embraer_190.gltf" },
     { name: "Lockheed C-5A Galaxy",             desc: "Strategic military airlifter &middot; Four TF39 turbofan",                                orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Lockheed_C5a/Lockheed_C5a.gltf" },
     { name: "Lockheed F-35C",                   desc: "Carrier-based multirole fighter &middot; Single F135 turbofan",                           orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/Lockheed_F35C/Lockheed_F35C.gltf" },
     { name: "NASA X-57 Maxwell Mod II",         desc: "Electric experimental aircraft &middot; Distributed electric propulsion",                  orientation: "0deg 0deg -90deg", src: "https://cdn.jsdelivr.net/gh/leadsgroup/RCAIDE_LEADS@master/Digital_Hangar/NASA_X_57_Modification_2/X57_Maxwell_M2.gltf" },
@@ -401,6 +401,8 @@ function selectAircraft(index) {
     var viewer = document.getElementById('hangar-viewer');
     viewer.addEventListener('load', function() {
         viewer.setAttribute('orientation', a.orientation || '0deg 0deg -90deg');
+        viewer.setAttribute('camera-orbit', '0deg 75deg auto');
+        viewer.setAttribute('camera-target', 'auto auto auto');
     }, { once: true });
     viewer.setAttribute('src', a.src);
     document.getElementById('hangar-name').textContent = a.name;
@@ -428,7 +430,7 @@ function selectAircraft(index) {
                     <li>Built-in results viewer and plotting</li>
                 </ul>
                 <div style="background: #161b27; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px 18px; font-family: monospace; font-size: 15px; color: #7dd3fc; margin-bottom: 24px;">
-                    pip install RCAIDE-GUI
+                    pip install rcaide-gui
                 </div>
                 <a class="btn btn-primary btn-lg" href="https://pypi.org/project/RCAIDE-GUI/" role="button" target="_blank">Download GUI</a>
                 &nbsp;

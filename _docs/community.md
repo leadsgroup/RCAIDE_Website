@@ -34,7 +34,7 @@ permalink: /community/
         <ul class="list-unstyled mb-4">
           <li class="mb-2"><strong><i class="fa fa-github text-light me-1"></i>GitHub:</strong> <a href="https://github.com/leadsgroup" target="_blank" class="text-decoration-none text-info">leadsresearchgroup</a></li>
           <li class="mb-2"><strong><i class="fa fa-twitter text-light me-1"></i>Twitter:</strong> <a href="https://x.com/leadsresearch" target="_blank" class="text-decoration-none text-info">@leadsresearchgroup</a></li>
-          <li class="mb-2"><strong><i class="fa fa-comment text-light me-1"></i>Slack:</strong> Join our <a href="#" class="text-decoration-none text-info">Slack community</a> for real-time discussions.</li>
+          <li class="mb-2"><strong><i class="fa fa-github text-light me-1"></i>Discussions:</strong> Ask questions and share ideas on <a href="https://github.com/leadsgroup/RCAIDE_LEADS/discussions" target="_blank" class="text-decoration-none text-info">GitHub Discussions</a>.</li>
         </ul>
       </section>
 
@@ -50,10 +50,10 @@ permalink: /community/
           Your participation makes this community stronger. Whether you’re new or experienced, there are many ways to contribute and grow:
         </p>
         <ul class="mb-4">
-          <li class="mb-2">Share feedback, report issues, and request features via our <a href="https://github.com/leadsresearchgroup/rcaide/issues" target="_blank" class="text-decoration-none text-info">GitHub Issues</a>.</li>
-          <li class="mb-2">Engage with peers and maintainers in <a href="https://github.com/leadsresearchgroup/rcaide/discussions" target="_blank" class="text-decoration-none text-info">Discussions</a>.</li>
-          <li class="mb-2">Submit improvements or new features with a <a href="https://github.com/leadsresearchgroup/rcaide/pulls" target="_blank" class="text-decoration-none text-info">Pull Request</a>.</li>
-          <li>Refine our project’s documentation by following our <a href="https://github.com/leadsresearchgroup/rcaide/blob/main/CONTRIBUTING.md" target="_blank" class="text-decoration-none text-info">Contribution Guidelines</a>.</li>
+          <li class="mb-2">Share feedback, report issues, and request features via <a href="https://github.com/leadsgroup/RCAIDE_LEADS/issues" target="_blank" class="text-decoration-none text-info">GitHub Issues</a>.</li>
+          <li class="mb-2">Ask questions and engage with maintainers in <a href="https://github.com/leadsgroup/RCAIDE_LEADS/discussions" target="_blank" class="text-decoration-none text-info">GitHub Discussions</a>.</li>
+          <li class="mb-2">Submit improvements or new features with a <a href="https://github.com/leadsgroup/RCAIDE_LEADS/pulls" target="_blank" class="text-decoration-none text-info">Pull Request</a>.</li>
+          <li>Read our <a href="https://github.com/leadsgroup/RCAIDE_LEADS/blob/master/CONTRIBUTING.md" target="_blank" class="text-decoration-none text-info">Contribution Guidelines</a> before submitting changes.</li>
         </ul>
         <p class="mt-4 mb-4">
           Every contribution, large or small, is meaningful. Your insights and efforts help shape this community into a better, more welcoming place.
@@ -84,7 +84,7 @@ permalink: /community/
 
         <h3 class="mt-4 mb-3">Enforcement</h3>
         <p>
-          Community leaders actively uphold these standards. If you witness or experience unacceptable behavior, please reach out to us.
+          Community leaders actively uphold these standards. If you witness or experience unacceptable behavior, please open a report via <a href="https://github.com/leadsgroup/RCAIDE_LEADS/discussions" target="_blank" class="text-decoration-none text-info">GitHub Discussions</a>.
           We are dedicated to ensuring everyone’s comfort and safety.
         </p>
       </section>

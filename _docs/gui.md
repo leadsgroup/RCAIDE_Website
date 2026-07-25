@@ -483,6 +483,92 @@ permalink: /gui/
         min-height: 190px;
     }
 }
+
+/* Install options: stacked option cards for the Quick Start section. */
+.gui-install-options {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.gui-install-option {
+    padding: 20px 24px;
+    background: #203141;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+}
+
+.gui-install-option-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.gui-install-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #5bc0de;
+    color: #06101b;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.gui-install-option-title strong {
+    color: #e9f7ff;
+    font-size: 15px;
+}
+
+.gui-install-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 38px;
+}
+
+.gui-install-step-label {
+    display: block;
+    color: #b8c8d6;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.gui-install-paths {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding-left: 38px;
+}
+
+.gui-install-path {
+    padding: 14px 16px;
+    background: rgba(155, 231, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+}
+
+.gui-install-path-label {
+    display: block;
+    color: #9be7ff;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 640px) {
+    .gui-install-paths {
+        grid-template-columns: 1fr;
+    }
+    .gui-install-steps,
+    .gui-install-paths {
+        padding-left: 0;
+    }
+}
 </style>
 
 <div class="gui-page">
@@ -537,19 +623,71 @@ permalink: /gui/
             <h2>Quick Start</h2>
           </div>
         </div>
-        <div class="gui-command-grid">
-            <div class="gui-command">
-                <span>Install from PyPI</span>
-                <code>pip install RCAIDE-GUI</code>
+        <div class="gui-intro-callout" style="margin-bottom: 20px;">
+            <strong>⚠️ Important:</strong> RCAIDE GUI must be installed in the <strong>same Python environment</strong> as RCAIDE. If they are in different environments, the GUI will fail to start and aircraft files will not load. If RCAIDE is already installed, always use that same environment when installing the GUI.
+        </div>
+        <p style="color: #b8c8d6; margin-bottom: 20px;">Choose the option that matches your situation.</p>
+        <div class="gui-install-options">
+
+            <!-- Option 1: No RCAIDE yet -->
+            <div class="gui-install-option">
+                <div class="gui-install-option-title">
+                    <span class="gui-install-badge">1</span>
+                    <strong>I don't have RCAIDE installed yet</strong>
+                </div>
+                <div class="gui-install-paths">
+                    <div class="gui-install-path">
+                        <span class="gui-install-path-label">Install directly</span>
+                        <span class="gui-install-step-label">Run this single command to install RCAIDE and the GUI together:</span>
+                        <div class="gui-command"><code>pip install rcaide-leads rcaide-gui</code></div>
+                        <span class="gui-install-step-label" style="margin-top:10px;">Then launch:</span>
+                        <div class="gui-command"><code>rcaide-gui</code></div>
+                    </div>
+                    <div class="gui-install-path">
+                        <span class="gui-install-path-label">Use a virtual environment <span style="color:#b8c8d6;font-weight:400;">(recommended)</span></span>
+                        <span class="gui-install-step-label">Step 1 — Create and activate a virtual environment:</span>
+                        <div class="gui-command"><code>python -m venv rcaide_env</code></div>
+                        <div class="gui-command" style="margin-top:4px;"><code>source rcaide_env/bin/activate &nbsp;&nbsp;&nbsp;# macOS / Linux</code></div>
+                        <div class="gui-command" style="margin-top:4px;"><code>rcaide_env\Scripts\activate &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Windows</code></div>
+                        <span class="gui-install-step-label" style="margin-top:10px;">Step 2 — Install RCAIDE and the GUI:</span>
+                        <div class="gui-command"><code>pip install rcaide-leads rcaide-gui</code></div>
+                        <span class="gui-install-step-label" style="margin-top:10px;">Step 3 — Launch:</span>
+                        <div class="gui-command"><code>rcaide-gui</code></div>
+                    </div>
+                </div>
             </div>
-            <div class="gui-command">
-                <span>Launch the desktop app</span>
-                <code>rcaide-gui</code>
+
+            <!-- Option 2: RCAIDE installed directly -->
+            <div class="gui-install-option">
+                <div class="gui-install-option-title">
+                    <span class="gui-install-badge">2</span>
+                    <strong>RCAIDE is already installed directly on my machine (no virtual environment)</strong>
+                </div>
+                <div class="gui-install-steps">
+                    <span class="gui-install-step-label">Install the GUI into the same Python installation:</span>
+                    <div class="gui-command"><code>pip install rcaide-gui</code></div>
+                    <span class="gui-install-step-label" style="margin-top:6px;">Then launch:</span>
+                    <div class="gui-command"><code>rcaide-gui</code></div>
+                </div>
             </div>
-            <div class="gui-command">
-                <span>Run from source</span>
-                <code>python main.py</code>
+
+            <!-- Option 3: RCAIDE in a virtual environment -->
+            <div class="gui-install-option">
+                <div class="gui-install-option-title">
+                    <span class="gui-install-badge">3</span>
+                    <strong>RCAIDE is installed inside a virtual environment</strong>
+                </div>
+                <div class="gui-install-steps">
+                    <span class="gui-install-step-label">Step 1 — Activate the environment that contains RCAIDE:</span>
+                    <div class="gui-command"><code>source rcaide_env/bin/activate &nbsp;&nbsp;&nbsp;# macOS / Linux</code></div>
+                    <div class="gui-command" style="margin-top:4px;"><code>rcaide_env\Scripts\activate &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Windows</code></div>
+                    <span class="gui-install-step-label" style="margin-top:10px;">Step 2 — Install the GUI into the same environment:</span>
+                    <div class="gui-command"><code>pip install rcaide-gui</code></div>
+                    <span class="gui-install-step-label" style="margin-top:10px;">Step 3 — Launch:</span>
+                    <div class="gui-command"><code>rcaide-gui</code></div>
+                </div>
             </div>
+
         </div>
     </section>
 

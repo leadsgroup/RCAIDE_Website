@@ -32,7 +32,7 @@ Create a virtual environment, then install both packages into it before launchin
 python3 -m venv rcaide_env
 source rcaide_env/bin/activate
 pip install --upgrade pip
-pip install RCAIDE-LEADS RCAIDE-GUI
+pip install rcaide-leads rcaide-gui
 rcaide-gui
 ```
 
@@ -42,7 +42,7 @@ rcaide-gui
 python -m venv rcaide_env
 rcaide_env\Scripts\activate
 pip install --upgrade pip
-pip install RCAIDE-LEADS RCAIDE-GUI
+pip install rcaide-leads rcaide-gui
 rcaide-gui
 ```
 
@@ -70,7 +70,7 @@ source rcaide_env/bin/activate   # Windows: rcaide_env\Scripts\activate
 
 # 2. Install RCAIDE into that environment first
 pip install --upgrade pip
-pip install RCAIDE-LEADS
+pip install rcaide-leads
 
 # 3. Clone and install the GUI into the same environment
 git clone https://github.com/leadsgroup/RCAIDE_GUI.git
@@ -100,7 +100,7 @@ pip install --upgrade pip
 Then re-install:
 
 ```bash
-pip install RCAIDE-LEADS RCAIDE-GUI
+pip install rcaide-leads rcaide-gui
 ```
 
 ---
@@ -112,26 +112,26 @@ RCAIDE and RCAIDE-GUI are in different Python environments. Check which Python e
 ```bash
 # macOS / Linux
 which python
-pip show RCAIDE-LEADS
-pip show RCAIDE-GUI
+pip show rcaide-leads
+pip show rcaide-gui
 
 # Windows
 where python
-pip show RCAIDE-LEADS
-pip show RCAIDE-GUI
+pip show rcaide-leads
+pip show rcaide-gui
 ```
 
 Both `Location:` lines must point to the same environment. If they differ, activate the environment that contains RCAIDE-LEADS and reinstall the GUI into it:
 
 ```bash
-pip install --force-reinstall RCAIDE-GUI
+pip install --force-reinstall rcaide-gui
 ```
 
 ---
 
 **`rcaide-gui` command not found after install**
 
-The `rcaide-gui` script is placed in the active environment's `bin/` (macOS/Linux) or `Scripts/` (Windows) directory. Make sure the environment is activated, or use the full path:
+This usually means the virtual environment is not activated, or the script was installed in a different environment. Activate the correct environment first and try again. If the command is still not found, you can run it directly using the full path:
 
 ```bash
 # macOS / Linux
@@ -148,7 +148,7 @@ rcaide_env\Scripts\rcaide-gui
 Avoid `sudo pip install`. Always install inside a virtual environment or add `--user`:
 
 ```bash
-pip install --user RCAIDE-LEADS RCAIDE-GUI
+pip install --user rcaide-leads rcaide-gui
 ```
 
 ---
@@ -156,7 +156,7 @@ pip install --user RCAIDE-LEADS RCAIDE-GUI
 ## Keeping RCAIDE Up to Date
 
 ```bash
-pip install --upgrade RCAIDE-LEADS RCAIDE-GUI
+pip install --upgrade rcaide-leads rcaide-gui
 ```
 
 ---
@@ -165,6 +165,6 @@ pip install --upgrade RCAIDE-LEADS RCAIDE-GUI
 
 | Platform | Known issues |
 |---|---|
-| macOS (Apple Silicon) | Some VTK wheels may need Rosetta. If the geometry viewer crashes, try `pip install vtk --pre`. |
+| macOS (Apple Silicon) | If the geometry viewer crashes, try `pip install vtk --pre`. If that still fails, install [Rosetta](https://support.apple.com/en-us/HT211861) (Apple's compatibility layer for running Intel software on Apple Silicon) and re-run the installer. |
 | Windows | Run Command Prompt or PowerShell as a regular user, not Administrator, to avoid path permission issues. |
 | Linux | `libGL` and `libEGL` are required for the 3D viewer. Install with `sudo apt install libgl1 libegl1` (Debian/Ubuntu). |
