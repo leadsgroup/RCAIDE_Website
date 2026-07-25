@@ -4,47 +4,37 @@ permalink: /docs/home/
 redirect_from: /docs/index.html
 ---
 
-## Getting started
+## What is RCAIDE?
 
-[GitHub Pages](https://pages.github.com) can adasdasdasdasd generate and serve the website for you.
-Let's say you have a username/organisation `my-org` and project `my-proj`; if you locate Jekyll source under `docs` folder of master branch in your repo `github.com/my-org/my-proj`, the website will be served on `my-org.github.io/my-proj`.
-The good thing about coupling your documentation with the source repo is, whenever you merge features with regarding content to master branch, it will also be published on the webpage instantly.
+RCAIDE (Research Centre for Aerospace Intelligent Design Environment) is an open-source Python framework for aircraft design, analysis, and optimization. It is developed and maintained by the [Laboratory for Emerging Aircraft Design and Systems (LEADS)](https://www.leadsresearchgroup.com/) at the University of Illinois Urbana-Champaign.
 
-1. Just [download the source](https://github.com/aksakalli/jekyll-doc-theme/archive/gh-pages.zip) into your repo under `docs` folder.
-2. Edit site settings in  `_config.yml` file according to your project. !!! `baseurl` should be your website's relative URI like `/my-proj` !!!
-3. Replace `favicon.ico` and `assets/img/logonav.png` with your own logo.
+RCAIDE lets you define a full aircraft — geometry, propulsion, aerodynamics, weights, and mission profile — and run physics-based analyses from a single Python environment.
 
-## Writing content
-
-### Docs
-
-Docs are [collections](https://jekyllrb.com/docs/collections/) of pages stored under `_docs` folder. To create a new page:
-
-**1.** Create a new Markdown as `_docs/my-page.md` and write [front matter](https://jekyllrb.com/docs/frontmatter/) & content such as:
-
-```
----
-title: My Page
-permalink: /docs/my-page/
 ---
 
-Hello World!
-```
+## Getting Started
 
-**2.** Add the pagename to `_data/docs.yml` file in order to list in docs navigation panel:
+New to RCAIDE? Start here:
 
-```
-- title: My Group Title
-  docs:
-  - my-page
-```
+1. **[Install RCAIDE](/Install/)** — set up RCAIDE and the GUI on your machine
+2. **[RCAIDE GUI](/gui/)** — use the desktop interface to define aircraft and run simulations without writing code
+3. **[Examples](/docs/examples/)** — browse worked examples covering a range of aircraft types and analyses
 
-### Blog posts
+---
 
-Add a new Markdown file such as `2017-05-09-my-post.md` and write the content similar to other post examples.
+## Key Capabilities
 
-### Pages
+- **Vehicle definition** — wings, fuselages, propulsion networks, landing gear, and more
+- **Aerodynamic analysis** — vortex lattice, panel methods, and surrogate models
+- **Propulsion modeling** — turbofan, turboprop, electric, hybrid, and hydrogen fuel cell networks
+- **Mission simulation** — segment-by-segment mission analysis with fuel burn and performance outputs
+- **Geometry visualization** — 3D viewer for validating aircraft geometry before running analyses
+- **Optimization** — built-in interfaces for gradient-based and surrogate-based optimization
 
-The homepage is located under `index.html` file. You can change the content or design completely different welcome page for your taste. (You can use [bootstrap components](http://getbootstrap.com/components/))
+---
 
-In order to add a new page, create a new `.html` or `.md` (markdown) file under root directory and link it in `_includes/topnav.html`.
+## Where to Get Help
+
+- [GitHub Discussions](https://github.com/leadsgroup/RCAIDE_LEADS/discussions) — ask questions and share ideas
+- [GitHub Issues](https://github.com/leadsgroup/RCAIDE_LEADS/issues) — report bugs or request features
+- [Community](/community/) — contribution guidelines and code of conduct
